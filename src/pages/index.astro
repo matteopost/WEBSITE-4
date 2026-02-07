@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Home from '../components/Home.astro';
+import Nav from '../components/Nav.astro';
+import Nav2 from '../components/Nav2.astro';
+import LanguageSwitcher1 from '../components/LanguageSwitcher-1.astro'
+import { astroI18n, t } from "astro-i18n"
+
+
+astroI18n.locale 
+---
+
+<Layout title={t("index.title")}>
+	<Nav2/>
+	<!-- <div class="absolute w-screen h-screen top-0 left-0 bg-white z-50 fadeOutAnimation"></div> -->
+	<!-- <Nav/> -->
+	<Home/>
+</Layout>
+

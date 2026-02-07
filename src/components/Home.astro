@@ -1,0 +1,376 @@
+---
+import HomeComp from "../components/HomeComp.astro";
+import Image from "astro:assets";
+import { t } from "astro-i18n";
+
+import img1 from '../../src/assets/img/cremona/cremona_20.png' ;
+import img2 from '../../src/assets/img/cremona/cremona_13.png';
+import img3 from '../../src/assets/img/cremona/cremona_18.png';
+import img4 from '../../src/assets/img/cremona/cremona_15.png';
+import img5 from '../../src/assets/img/cremona/cremona_16.png';
+
+import videoCremona1 from '../../src/assets/video/cremona/LIUTERIE CREMONESI 1.mp4';
+import videoCremona2 from '../../src/assets/video/cremona/LIUTERIE CREMONESI 2.mp4';
+import videoCremona3 from '../../src/assets/video/cremona/LIUTERIE CREMONESI 3.mp4';
+import videoCremona4 from '../../src/assets/video/cremona/LIUTERIE CREMONESI 4.mp4';
+import videoCremona5 from '../../src/assets/video/cremona/LIUTERIE CREMONESI 5.mp4';
+
+import imgKinesis1 from '../../src/assets/img/kinesis/Kinesis-21.jpg';
+import imgKinesis2 from '../../src/assets/img/kinesis/Kinesis-02.jpg';
+import imgKinesis3 from '../../src/assets/img/kinesis/Kinesis-10.jpg';
+import imgKinesis4 from '../../src/assets/img/kinesis/Kinesis-07.jpg';
+import imgKinesis5 from '../../src/assets/img/kinesis/Kinesis-06.jpg';
+import imgKinesis6 from '../../src/assets/img/kinesis/Kinesis-08.jpg';
+import imgKinesis7 from '../../src/assets/img/kinesis/Kinesis-01.jpg';
+
+import videoKinesis from '../../src/assets/video/kinesis/KINESIS VIDEO SITO.mp4';
+
+import imgbyit1 from '../../src/assets/img/byit/BY_IT-MOCKUP-1.jpg';
+import imgbyit2 from '../../src/assets/img/byit/BY_IT-MOCKUP-2.jpg';
+import imgbyit3 from '../../src/assets/img/byit/BY_IT-MOCKUP-3.jpg';
+import imgbyit4 from '../../src/assets/img/byit/BY_IT-MOCKUP-4.jpg';
+import imgbyit5 from '../../src/assets/img/byit/BY_IT-MOCKUP-5.jpg';
+import imgbyit6 from '../../src/assets/img/byit/BY_IT-MOCKUP-6.jpg';
+
+import videoBYIT1 from '../../src/assets/video/byit/byit-article-video-2.mp4';
+import videoBYIT2 from '../../src/assets/video/byit/byit-article-video-1.mp4'; 
+import videoBYIT3 from '../../src/assets/video/byit/byit-article-video-3.mp4';
+import videoBYIT4 from '../../src/assets/video/byit/BYIT VIDEO 1.mp4';
+import videoBYIT5 from '../../src/assets/video/byit/BYIT VIDEO 2.mp4';
+import videoBYIT6 from '../../src/assets/video/byit/BYIT VIDEO 3.mp4';
+import videoBYIT7 from '../../src/assets/video/byit/BYIT VIDEO 4.mp4';
+
+import imgTP1 from '../../src/assets/img/tp/TP-Alpi-Slavc.png';
+import imgTP2 from '../../src/assets/img/tp/TP-Alpi-Monte-Bianco.png';
+import imgTP3 from '../../src/assets/img/tp/tp-londra-rer.png';
+import imgTP4 from '../../src/assets/img/tp/tp-londra-calcio-04.png';
+
+import videoTP1 from '../../src/assets/video/tp/TP Alpi Treni.mp4';
+import videoTP2 from '../../src/assets/video/tp/TP Alpi Kaunertal Video.mp4';
+import videoTP3 from '../../src/assets/video/tp/TP-Alpi-Cover.mp4';
+
+import videoRS1 from '../../src/assets/video/rawscenarios/VIDEO SITO RAWSCENARIOS 1.mp4'
+import videoRS2 from '../../src/assets/video/rawscenarios/VIDEO SITO RAWSCENARIOS 2.mp4'
+import videoRS3 from '../../src/assets/video/rawscenarios/VIDEO SITO RAWSCENARIOS 3.mp4'
+
+import imgNeptuna1 from '../../src/assets/img/neptuna/Neptuna_05.jpg';
+import imgNeptuna2 from '../../src/assets/img/neptuna/Neptuna_06.jpg';
+
+import videoNeptuna1 from '../../src/assets/video/neptuna/VIDEO NETPUNA SITO 1.mp4'
+import videoNeptuna2 from '../../src/assets/video/neptuna/VIDEO NETPUNA SITO 2.mp4'
+import videoNeptuna3 from '../../src/assets/video/neptuna/VIDEO NETPUNA SITO 3.mp4'
+import videoNeptuna4 from '../../src/assets/video/neptuna/VIDEO NETPUNA SITO 4.mp4'
+import videoNeptuna5 from '../../src/assets/video/neptuna/VIDEO NETPUNA SITO 5.mp4'
+import videoNeptuna6 from '../../src/assets/video/neptuna/VIDEO NETPUNA SITO 6.mp4'
+import videoNeptuna7 from '../../src/assets/video/neptuna/VIDEO NETPUNA SITO 7.mp4'
+import videoNeptuna8 from '../../src/assets/video/neptuna/VIDEO NETPUNA SITO 8.mp4'
+import videoNeptuna9 from '../../src/assets/video/neptuna/VIDEO NETPUNA SITO 9.mp4'
+
+import imgMappaMilano1 from '../../src/assets/img/mappa_milano/mappa_milano_7.png';
+import imgMappaMilano2 from '../../src/assets/img/mappa_milano/mappa_milano_8.png';
+import imgMappaMilano3 from '../../src/assets/img/mappa_milano/mappa_milano_9.png';
+import imgMappaMilano4 from '../../src/assets/img/mappa_milano/MILANO_mappa_2023_1.png';
+import imgMappaMilano5 from '../../src/assets/img/mappa_milano/MILANO_mappa_2023_2.png';
+import imgMappaMilano6 from '../../src/assets/img/mappa_milano/MILANO_mappa_2023_3.png';
+import imgMappaMilano7 from '../../src/assets/img/mappa_milano/MILANO_mappa_2023_4.png';
+
+import videoDSI1 from '../../src/assets/video/DSI/DESIGN SPAZIALE ITALIANO 1.mp4'
+import videoDSI2 from '../../src/assets/video/DSI/DESIGN SPAZIALE ITALIANO 2.mp4'
+import videoDSI3 from '../../src/assets/video/DSI/DESIGN SPAZIALE ITALIANO 3.mp4'
+import videoDSI4 from '../../src/assets/video/DSI/DESIGN SPAZIALE ITALIANO 4.mp4'
+
+import imgNero1 from '../../src/assets/img/nero/nero-3.png';
+import imgNero2 from '../../src/assets/img/nero/nero_1.png';
+import imgNero3 from '../../src/assets/img/nero/nero-4.png';
+import imgNero4 from '../../src/assets/img/nero/nero-5.png';
+import imgNero5 from '../../src/assets/img/nero/nero-6.png';
+import imgNero6 from '../../src/assets/img/nero/nero-7.png';
+import imgNero7 from '../../src/assets/img/nero/nero-8.png';
+import imgNero8 from '../../src/assets/img/nero/nero-9.png';
+import imgNero9 from '../../src/assets/img/nero/nero-10.png';
+
+import videoNero1 from '../../src/assets/video/nero/NERO VIDEO 1.mp4'
+
+import imgLodi1  from '../../src/assets/img/lodi/lodi_1.png';
+import imgLodi2  from '../../src/assets/img/lodi/lodi_2.png';
+import imgLodi3  from '../../src/assets/img/lodi/lodi_3.png';
+import imgLodi4  from '../../src/assets/img/lodi/lodi_4.png';
+import imgLodi5  from '../../src/assets/img/lodi/lodi_5.png';
+import imgLodi6  from '../../src/assets/img/lodi/lodi_6.png';
+import imgLodi8  from '../../src/assets/img/lodi/lodi_8.png';
+
+import videoLodi from '../../src/assets/video/lodi/lodi.mp4'
+
+import OscarDisplay1  from '../../src/assets/img/OscarDisplay/Oscar-Display-Portfolio-1.jpg';
+import OscarDisplay2  from '../../src/assets/img/OscarDisplay/Oscar-Display-Portfolio-2.jpg';
+import OscarDisplay3  from '../../src/assets/img/OscarDisplay/Oscar-Display-Portfolio-3.jpg';
+import OscarDisplay4  from '../../src/assets/img/OscarDisplay/Oscar-Display-Portfolio-4.jpg';
+import OscarDisplay5  from '../../src/assets/img/OscarDisplay/Oscar-Display-Portfolio-5.jpg';
+import OscarDisplay6  from '../../src/assets/img/OscarDisplay/Oscar-Display-Portfolio-6.jpg';
+import OscarDisplay7  from '../../src/assets/img/OscarDisplay/Oscar-Display-Portfolio-7.jpg';
+import OscarDisplay8  from '../../src/assets/img/OscarDisplay/Oscar-Display-Portfolio-8.jpg';
+import OscarDisplay9  from '../../src/assets/img/OscarDisplay/Oscar-Display-Portfolio-9.jpg';
+import OscarDisplay10  from '../../src/assets/img/OscarDisplay/Oscar-Display-Portfolio-10.jpg';
+import OscarDisplay11  from '../../src/assets/img/OscarDisplay/Oscar-Display-Portfolio-11.jpg';
+import OscarDisplay12  from '../../src/assets/img/OscarDisplay/Oscar-Display-Portfolio-12.jpg';
+
+import type { ACTION_ERROR_CODES } from "astro:actions";
+
+const projects = [
+    { 
+        Title: t("projects.14.Title"), 
+        Category: t("projects.14.Category"), 
+        year: t("projects.14.year"), 
+        images: [OscarDisplay1, OscarDisplay2, OscarDisplay3, OscarDisplay4, OscarDisplay5, OscarDisplay6, OscarDisplay7, OscarDisplay8, OscarDisplay9, OscarDisplay10, OscarDisplay11, OscarDisplay12],
+        description: t("projects.14.description"),
+        link: "/zip/OscarDisplayVariable.zip",
+        video: [
+            
+        ],
+
+        linkText: "Download Font",
+        collaborators: [
+        ]
+    },
+
+    { 
+        Title: t("projects.12.Title"), 
+        Category: t("projects.12.Category"), 
+        year: t("projects.12.year"), 
+        images: [imgKinesis1, imgKinesis2, imgKinesis3, imgKinesis4, imgKinesis5, imgKinesis6, imgKinesis7],
+        description: t("projects.12.description"),
+        link: "",
+        video: [
+            { src: videoKinesis, poster: '../../src/assets/video/kinesis/poster/KINESIS VIDEO SITO.webp' },
+        ],
+
+        linkText: "",
+        collaborators: [
+            { name: "Edoardo Walter Bignami", link: "https://www.instagram.com/edobigna/" },
+            { name: "Simone Iasevoli", link: "https://www.instagram.com/simone_iasevoli/" },
+            { name: "Elisa Paganoni", link: "https://www.instagram.com/eli_pgn/" },
+            { name: "Federico Porro", link: "https://www.instagram.com/federicoporroo/" },
+            { name: "Yeni Tatiana Sartori", link: "https://www.instagram.com/yenisartori/" },
+        ]
+    },
+
+    { 
+        Title: t("projects.11.Title"), 
+        Category: t("projects.11.Category"), 
+        year: t("projects.11.year"), 
+        images: [],
+        description: t("projects.11.description"),
+        link: "https://designspazialeitaliano.it/",
+        video: [
+            { src: videoDSI1, poster: '../../src/assets/video/DSI/poster/DESIGN SPAZIALE ITALIANO 1.webp' },
+            { src: videoDSI2, poster: '../../src/assets/video/DSI/poster/DESIGN SPAZIALE ITALIANO 2.webp' },
+            { src: videoDSI3, poster: '../../src/assets/video/DSI/poster/DESIGN SPAZIALE ITALIANO 4.webp' },
+            { src: videoDSI4, poster: '../../src/assets/video/DSI/poster/DESIGN SPAZIALE ITALIANO 3.webp' },
+        ],
+
+        linkText: "Design Spaziale Italiano",
+        collaborators: [
+            { name: "Propp", link: "https://propp.it/" },
+            { name: "Pierluigi Anselmi", link: "" },
+            { name: "Pietro Buffa", link: "https://pietrobuffa.it/" },
+            { name: "Alessandro Busseni" , link: "" },
+            { name: "Elisa Cappelletto", link: "https://www.instagram.com/elliscplt/" },
+            { name: "Marco Gariele", link: "https://www.instagram.com/marcobort/" },
+            { name: "Giada Fiorenza", link: "https://www.instagram.com/giada.fiorenza/" },
+            { name: "Giacomo Quinland", link: "https://www.instagram.com/settetrequattro/" },
+        ]
+    },
+
+    { 
+        Title: t("projects.10.Title"), 
+        Category: t("projects.10.Category"), 
+        year: t("projects.10.year"), 
+        images: [imgTP1, imgTP2, imgTP3, imgTP4],
+        description: t("projects.10.description"),
+        link: "https://propp.it/",
+        video: [
+            { src: videoTP3, poster: '../../src/assets/video/tp/poster/TP-Alpi-Cover.webp' },
+            { src: videoTP1, poster: '../../src/assets/video/tp/poster/TP Alpi Treni.webp' },
+            { src: videoTP2, poster: '../../src/assets/video/tp/poster/TP Alpi Kaunertal Video.webp' },
+        ],
+
+        linkText: "Propp",
+        collaborators: [
+            { name: "Propp", link: "https://propp.it/" },
+            { name: "Pietro Buffa", link: "https://pietrobuffa.it/" },
+        ]
+    },
+
+    {
+        Title: t("projects.13.Title"), 
+        Category: t("projects.13.Category"), 
+        year: t("projects.13.year"), 
+        images: [imgLodi1, imgLodi2, imgLodi3, imgLodi4, imgLodi5, imgLodi6, imgLodi8],
+        description: t("projects.13.description"),
+        link: "",
+        video: [
+            { src: videoLodi, poster: '../../src/assets/video/lodi/poster/lodi.webp' },
+        ],
+
+        linkText: "",
+        collaborators: [
+            { name: "Luigi Farrauto", link: "https://x.com/centochilometri" },
+            { name: "100km studio", link: "https://100km.studio/" },
+        ]
+    },
+
+    { 
+        Title: t("projects.1.Title"), 
+        Category: t("projects.1.Category"), 
+        year: t("projects.1.year"), 
+        images: [],
+        video: [
+            { src: videoBYIT1, poster: '../../src/assets/video/byit/poster/byit-article-video-2.webp' },
+            { src: videoBYIT2, poster: '../../src/assets/video/byit/poster/byit-article-video-1.webp' },
+            { src: videoBYIT3, poster: '../../src/assets/video/byit/poster/byit-article-video-3.webp' },
+            { src: videoBYIT4, poster: '../../src/assets/video/byit/poster/BYIT VIDEO 1.webp' },
+            { src: videoBYIT5, poster: '../../src/assets/video/byit/poster/BYIT VIDEO 2.webp' },
+            { src: videoBYIT6, poster: '../../src/assets/video/byit/poster/BYIT VIDEO 3.webp' },
+            { src: videoBYIT7, poster: '../../src/assets/video/byit/poster/BYIT VIDEO 4.webp' },
+        ],
+        description: t("projects.1.description"),
+        link: "https://by-it.netlify.app/",
+        linkText: "BY.IT",
+        collaborators: [
+            { name: "Giulia Cangini", link: "" },
+            { name: "Arianna Cecchet", link: "" },
+            { name: "Elisa Corbetta", link: "https://www.instagram.com/elisa.corbetta/" },
+            { name: "Simone Iasevoli", link: "https://www.instagram.com/simone_iasevoli/" },
+            { name: "Sara Ibarra", link: "" },
+            { name: "Andrea Piersimoni", link: "https://www.instagram.com/andreapiersimoni/" },
+        ]
+    },
+
+    { 
+        Title: t("projects.2.Title"), 
+        Category: t("projects.2.Category"), 
+        year: t("projects.2.year"), 
+        images: [],
+        video: [
+            { src: videoRS1, poster: '../../src/assets/video/rawscenarios/poster/VIDEO SITO RAWSCENARIOS 1.webp' },
+            { src: videoRS2, poster: '../../src/assets/video/rawscenarios/poster/VIDEO SITO RAWSCENARIOS 2.webp' },
+            { src: videoRS3, poster: '../../src/assets/video/rawscenarios/poster/VIDEO SITO RAWSCENARIOS 3.webp' },
+        ],
+
+        description: t("projects.2.description"),
+        link: "http://rawscenarios.labsintesi-c1.info/",
+        linkText: "RAWSCENARIOS",
+        collaborators: [
+            { name: "Caterina di Noia", link: "" },
+        ]
+    },
+
+    { 
+        Title: t("projects.4.Title"), 
+        Category: t("projects.4.Category"), 
+        year: t("projects.4.year"), 
+        images: [imgNeptuna1, imgNeptuna2],
+        video: [
+            { src: videoNeptuna8, poster: '../../src/assets/video/neptuna/poster/VIDEO NETPUNA SITO 8.webp' },
+            { src: videoNeptuna2, poster: '../../src/assets/video/neptuna/poster/VIDEO NETPUNA SITO 2.webp' },
+            { src: videoNeptuna1, poster: '../../src/assets/video/neptuna/poster/VIDEO NETPUNA SITO 1.webp' },
+            { src: videoNeptuna3, poster: '../../src/assets/video/neptuna/poster/VIDEO NETPUNA SITO 3.webp' },
+            { src: videoNeptuna6, poster: '../../src/assets/video/neptuna/poster/VIDEO NETPUNA SITO 6.webp' },
+            { src: videoNeptuna4, poster: '../../src/assets/video/neptuna/poster/VIDEO NETPUNA SITO 4.webp' },
+            { src: videoNeptuna5, poster: '../../src/assets/video/neptuna/poster/VIDEO NETPUNA SITO 5.webp' },
+            { src: videoNeptuna9, poster: '../../src/assets/video/neptuna/poster/VIDEO NETPUNA SITO 9.webp' },
+            { src: videoNeptuna7, poster: '../../src/assets/video/neptuna/poster/VIDEO NETPUNA SITO 7.webp' },
+        ],
+
+        description: t("projects.4.description"),
+        link: "http://rawscenarios.labsintesi-c1.info/2024/Tuna/",
+        linkText: "Neptuna - Raw Scenarios",
+        collaborators: [
+            { name: "Sara Balestrini", link: "https://www.instagram.com/meditoalcentrodelsole/" },
+            { name: "Asia Capezzuoli", link: "https://www.instagram.com/asiacapezzuoli/" },
+            { name: "Eva Cupellini", link: "https://www.instagram.com/eva.cupellini/" },
+            { name: "Edoardo Walter Bignami", link: "https://www.instagram.com/edobigna/" },
+            { name: "Simone Iasevoli", link: "https://www.instagram.com/simone_iasevoli/" },
+        ]
+
+    },
+
+    { 
+        Title: t("projects.5.Title"), 
+        Category: t("projects.5.Category"), 
+        year: t("projects.5.year"), 
+        images: [],
+        video: [
+            { src: videoCremona1, poster: '../../src/assets/video/cremona/poster/LIUTERIE CREMONESI 1.webp' },
+            { src: videoCremona2, poster: '../../src/assets/video/cremona/poster/LIUTERIE CREMONESI 2.webp' },
+            { src: videoCremona3, poster: '../../src/assets/video/cremona/poster/LIUTERIE CREMONESI 3.webp' },
+            { src: videoCremona4, poster: '../../src/assets/video/cremona/poster/LIUTERIE CREMONESI 4.webp' },
+            { src: videoCremona5, poster: '../../src/assets/video/cremona/poster/LIUTERIE CREMONESI 5.webp' },
+        ],
+
+        description: t("projects.5.description"),
+        link: "",
+        linkText: "",
+        collaborators: [
+            { name: "Dorian Wally Abialy", link: "https://www.instagram.com/abialydorian/" },
+            { name: "Simone Iasevoli", link: "https://www.instagram.com/simone_iasevoli/" },
+            { name: "Luisa Frezza", link: "https://www.instagram.com/effeperfrezza/" },
+            { name: "Edoardo Walter Bignami", link: "https://www.instagram.com/edobigna/" },
+        ]
+
+    },
+
+    { 
+        Title: t("projects.6.Title"), 
+        Category: t("projects.6.Category"), 
+        year: t("projects.6.year"), 
+        images: [imgMappaMilano2, imgMappaMilano3, imgMappaMilano1, imgMappaMilano4, imgMappaMilano5, imgMappaMilano7, imgMappaMilano6],
+        description: t("projects.6.description"),
+        link: "",
+        linkText: "",
+        collaborators: [
+            { name: "Luigi Farrauto", link: "https://x.com/centochilometri" },
+            { name: "100km studio", link: "https://100km.studio/" },
+            
+        ]
+
+    },
+
+    { 
+        Title: t("projects.9.Title"), 
+        Category: t("projects.9.Category"), 
+        year: t("projects.9.year"), 
+        images: [imgNero1, imgNero2],
+        video: [{ src: videoNero1, poster: '../../src/assets/video/nero/poster/NERO VIDEO 1.webp' },],
+        description: t("projects.9.description"),
+        link: "",
+        linkText: "",
+        collaborators: [
+            { name: "Benedetta Giugni", link: "https://www.instagram.com/benedettagiugni.jpg/" },
+            { name: "Pierfrancesco Pascuzzi", link: "https://www.instagram.com/pier.pascuzzi/" },
+            { name: "Giulia Polimeno", link: "https://www.instagram.com/giuliapolimeno/" },
+        ]
+
+    }
+
+];
+---
+
+<div class="absolute bottom-0 left-0 right-0 h-[100vh] px-2 pb-2 pt-24 overflow-y-auto no-scrollbar flex flex-col max-md:pt-[90vh] max-md:pb-12">
+    <div class="mt-auto">
+        {projects.map((project, index) => (
+            <HomeComp 
+                Title={project.Title} 
+                num={(index + 1).toString()}  
+                year={project.year} 
+                Category={project.Category} 
+                images={project.images ?? []}  
+                video={project.video ?? []} 
+                description={project.description}
+                link={project.link}
+                linkText={project.linkText}
+                collaborators={project.collaborators ?? []}
+            />
+        ))}
+    </div>
+</div>

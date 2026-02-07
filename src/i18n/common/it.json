@@ -1,0 +1,80 @@
+{
+	"index": {
+	"title": "Matteo Postinghel",
+	"collab": "Collaboratori",
+	"meta": {
+		"keywords": "Design della Comunicazione, Branding, Wayfinding, Design Editoriale, Coding, Designer di Milano, Designer di Monaco, Matteo, Design della Trasformazione, Politecnico di Milano, Web designer, UI/UX, Design grafico, Coding creativo, Design speculativo, Cartografia, Inglese, Francese, Tedesco, Italiano, Belga, Milano, Monaco",
+		"description": "Designer della comunicazione, sede a Milano, specializzato in branding, coding, wayfinding e design editoriale.",
+		"url": "https://matteopostinghel.com/it"
+		}
+	}, 
+	"nav": {
+	  "contact": "Contatto",
+	  "cookie": "Navigando su questo sito, accetti automaticamente i cookie."
+	},
+	"about": {
+		"age": "anni, designer di sistemi visivi e digitali e ricercatore di design, che incrocia un approccio human-centered con le nuove tecnologie da Monaco di Baviera con sede a Milano.",
+		"ongoing": "in corso",
+		"tbd": "da definire",
+		"months": [
+			"gen.",
+			"feb.",
+			"mar.",
+			"apr.",
+			"mag.",
+			"giu.",
+			"lug.",
+			"ago.",
+			"set.",
+			"ott.",
+			"nov.",
+			"dic."
+		],
+		"experience": [
+			"Esperienza",
+			"Tirocinante Interaction designer presso ",
+			"Tirocinante Graphic designer presso ",
+			"Tirocinante Graphic designer presso "
+		],
+		"education": [
+			"Formazione",
+			"MSc, Design della Comunicazione ",
+			"BSc, Design della Comunicazione ",
+			"BA, Design della Trasformazione presso ",
+			"Scuola di Design",
+			"Studente visitatore presso"
+		],
+		"languages": [
+			"Lingue",
+			"Francese",
+			"Tedesco",
+			"Italiano",
+			"Inglese",
+			"Spagnolo"
+		],
+		"exhibition": [
+			"Mostra",
+			"Presente in ",
+			", presso "
+		],
+		"cv": "Curriculum completo su richiesta"
+	},
+	"projects": [
+	  { "Title": "Energyoo", "Category": "Identità Visiva", "year": "2024",  "description": "Branding per una startup di batterie intercambiabili e sostenibili."},
+	  { "Title": "By.it", "Category": "Web Design", "year": "2024",  "description": "E-commerce per prodotti fuori produzione, accessibile in modalità scura solo la sera, svelando segreti e storie sui prodotti."},
+	  { "Title": "RawScenarios", "Category": "Web Design", "year": "2024",  "description": "Sito web per la mostra “Raw Scenarios: Reflection on Human Overconsumption” presso Dotdotdot, informando i visitatori e archiviando i progetti esposti."},
+	  { "Title": "Cinema e Fotografia", "Category": "Editoria", "year": "2024",  "description": "Due libri di editoria esplorano il cinema e la fotografia: uno dedicato a John Heartfield, pioniere del fotomontaggio politico dadaista, e l’altro su “Emak Bakia” di Man Ray, opera chiave del cinema surrealista."},
+	  { "Title": "Neptuna", "Category": "Design Speculativo", "year": "2024",  "description": "Neptuna is a speculative design thesis project that addresses the issues surrounding tuna production in the context of climate change. Through ironic and symbolic snacks and a slow distribution experience, it invites reflection on the environmental costs of consumer choices."},
+	  { "Title": "Liutaio di Cremona", "Category": "Identità Visiva", "year": "2023",  "description": "Rebranding completo dell’artigianato tradizionale del violino a Cremona, patrimonio immateriale UNESCO. Dal logo alla comunicazione visiva, fino a wayfinding, social media e gadget, il progetto crea un’identità coerente e riconoscibile."},
+	  { "Title": "Mappa Metropolitana di Milano", "Category": "Cartografia", "year": "2023",  "description": "Ho contribuito alla realizzazione del concept per la nuova mappa della metropolitana di Milano per lo studio 100km, riprogettata con un layout che combina un’area centrale geografica e zone esterne schematiche per le fermate. @100km Studio"},
+	  { "Title": "Studio 100km", "Category": "Web Design", "year": "2023",  "description": "In Studio 100km ho collaborato con Luigi Farrauto per aggiornare il sito, rinnovandone l’aspetto e i progetti. @100km Studio"},
+	  { "Title": "Anatomia dell'Orchestra", "Category": "Web Design", "year": "2022",  "description": "Sito web dedicato alla struttura di un'orchestra e ai suoi elementi."},
+	  { "Title": "Rappresentazione dell'Assenza e dell'Essenza della Nerezza", "Category": "Editoria", "year": "2021",  "description": "Libro-saggio visivo che esplora le sfumature del nero, dalla sua composizione scientifica alle emozioni profonde degli artisti, dando voce alle loro condizioni interiori attraverso la tipografia."},
+	  { "Title": "The Passenger", "Category": "Editoria", "year": "2024", "description": "Ho contribuito alla creazione delle mappe per The Passenger Alps e Londra."},
+	  { "Title": "Design Spaziale Italiano", "Category": "Web Design", "year": "2024", "description": "Ho contribuito allo sviluppo del sito web per l'identità visiva del design spaziale italiano."},
+	  { "Title": "Kinesis", "Category": "Editoria", "year": "2024", "description": "Il progetto editoriale si articola in una collana di magazine interamente dedicati all'arte cinetica analogica e digitale. Ogni numero propone un'esperienza dinamica esplorando opere, artisti, correnti e tecnologie di questa espressione artistica." },
+	  { "Title": "Pronto soccorso di Lodi", "Category": "Segnaletica", "year": "2024", "description": "Presso Studio 100km, ho contribuito con Luigi Farrauto alla riprogettazione del sistema di wayfinding per il pronto soccorso di Lodi, in Italia, migliorandone chiarezza e accessibilità attraverso la ridefinizione di icone e segnaletica." },
+	  { "Title": "Oscar Display Variable", "Category": "Type Design", "year": "2025",   "description": "Oscar Display è un carattere variabile costruito su una base quadrata con angoli arrotondati, che si espande su nove pesi dal sottile al nero. Passando dall’impostazione diritta, all’italico di 17° e allo slanted di 34°, si muove entro una geometria rigorosa piegandosi verso il movimento. Un sistema di glifi che si estende e si contrae, portando ritmo attraverso la forma."}
+
+	]
+}

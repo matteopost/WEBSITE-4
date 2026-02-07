@@ -1,0 +1,81 @@
+{
+	"index": {
+		"title": "Matteo Postinghel",
+		"collab": "Mitarbeiter",
+		"meta": {
+			"keywords": "Kommunikationsdesign, Branding, Orientierungssysteme, Editorial Design, Codierung, Designer aus Mailand, Designer aus München, Matteo, Transformationsdesign, Politecnico di Milano, Webdesigner, UI/UX, Grafikdesign, Kreatives Codieren, Spekulatives Design, Kartografie, Englisch, Französisch, Deutsch, Italienisch, Belgisch, Mailand, München",
+			"description": "Kommunikationsdesigner mit Sitz in Mailand, spezialisiert auf Branding, Codierung, Orientierungssysteme und Editorial Design.",
+			"url": "https://matteopostinghel.com/de"
+		}
+	}, 
+	"nav": {
+	  "contact": "Kontakt",
+	  "cookie": "Durch das Browsen auf dieser Website akzeptieren Sie automatisch Cookies."
+	},
+	"about": {
+		"age": "Jahre alter Designer für visuelle und digitale Systeme und Designforscher, der einen human-centered approach mit neuen Technologien verbindet, aus München mit Sitz in Mailand.",
+		"ongoing": "aktuell",
+		"tbd": "zu definieren",
+		"months": [
+			"jan.",
+			"feb.",
+			"mär.",
+			"apr.",
+			"mai.",
+			"jun.",
+			"jul.",
+			"aug.",
+			"sep.",
+			"okt.",
+			"nov.",
+			"dez."
+		],
+		"experience": [
+			"Erfahrung",
+			"Praktikant als Interaction Designer bei ",
+			"Praktikant als Grafikdesigner bei ",
+			"Praktikant als Grafikdesigner bei "
+		],
+		"education": [
+			"Ausbildung",
+			"MSc in Kommunikationsdesign im ",
+			"BSc in Kommunikationsdesign im ",
+			"BA in Transformationsdesign an der ",
+			"Schule für Design",
+			"Besuchender Student am "
+		],
+		"languages": [
+			"Sprachen",
+			"Französisch",
+			"Deutsch",
+			"Italienisch",
+			"Englisch",
+			"Spanisch"
+		],
+		"exhibition": [
+			"Ausstellung",
+			"Vertretet in ",
+			", bei "
+		],
+		"cv": "Vollständiger Lebenslauf auf Anfrage"
+	},
+	"projects": [
+	  { "Title": "Energyoo", "Category": "Visuelle Identität", "year": "2024", "description": "Branding für ein Startup mit nachhaltigen, austauschbaren Batterien."},
+	  { "Title": "By.it", "Category": "Webdesign", "year": "2024", "description": "E-Commerce-Website für eingestellte Produkte, die nur abends im Dunkelmodus zugänglich ist und Geheimnisse und Geschichten über die Produkte enthüllt."},
+	  { "Title": "RawScenarios", "Category": "Webdesign", "year": "2024", "description": "Website für die Ausstellung „Raw Scenarios: Reflection on Human Overconsumption“ bei Dotdotdot, zur Information der Besucher und Archivierung der ausgestellten Projekte."},
+	  { "Title": "Kino und Fotografie", "Category": "Verlag", "year": "2024", "description": "Zwei Bücher zur Verlagskunst befassen sich mit Kino und Fotografie: eines widmet sich John Heartfield, dem Pionier des dadaistischen politischen Fotomontages, und das andere „Emak Bakia“ von Man Ray, einem Schlüsselwerk des surrealistischen Kinos."},
+	  { "Title": "Neptuna", "Category": "Spekulatives Design", "year": "2024", "description": "Neptuna ist ein spekulatives Designprojekt, das sich mit den Problemen der Thunfischproduktion im Kontext des Klimawandels auseinandersetzt. Durch ironische und symbolische Snacks und ein langsames Vertriebserlebnis regt es zur Reflexion über die Umweltkosten von Konsumentscheidungen an."},
+	  { "Title": "Cremona Geigenbauer", "Category": "Visuelle Identität", "year": "2023", "description": "Komplettes Rebranding des traditionellen Geigenhandwerks in Cremona, ein immaterielles UNESCO-Kulturerbe. Vom Logo über die visuelle Kommunikation bis hin zu Wegweisern, Social Media und Merchandising schafft das Projekt eine kohärente und wiedererkennbare Identität."},
+	  { "Title": "Mailänder U-Bahn-Karte", "Category": "Kartographie", "year": "2023", "description": "Ich habe am Konzept für die neue Mailänder U-Bahn-Karte für das Studio 100km mitgewirkt, neu gestaltet mit einem Layout, das einen zentralen geografischen Bereich und schematische Außenbereiche für die Stationen kombiniert. @100km Studio"},
+	  { "Title": "100km Studio", "Category": "Webdesign", "year": "2023", "description": "Im Studio 100km habe ich mit Luigi Farrauto zusammengearbeitet, um die Website zu aktualisieren und ihr Design sowie die Projekte zu erneuern. @100km Studio"},
+	  { "Title": "Anatomie des Orchesters", "Category": "Webdesign", "year": "2022", "description": "Website, der der Struktur eines Orchesters und seinen Elementen gewidmet ist."},
+	  { "Title": "Darstellung von Abwesenheit und Essenz von Schwarzem", "Category": "Verlag", "year": "2021", "description": "Visuelles Essay-Buch, das die Nuancen von Schwarz erforscht, von seiner wissenschaftlichen Zusammensetzung bis zu den tiefen Emotionen der Künstler und ihren inneren Zuständen durch Typografie Ausdruck verleiht."},
+	  { "Title": "The Passenger", "Category": "Verlag", "year": "2024", "description": "Ich habe zur Erstellung der Karten für The Passenger Alps und London beigetragen." },
+	  { "Title": "Design Spaziale Italiano", "Category": "Webdesign", "year": "2024", "description": "Ich habe zur Entwicklung der Website für die visuelle Identität des italienischen Raumdesigns beigetragen." },
+	  { "Title": "Kinesis", "Category": "Verlag", "year": "2024", "description": "Das redaktionelle Projekt gliedert sich in eine Reihe von Magazinen, die vollständig der analogen und digitalen kinetischen Kunst gewidmet sind. Jede Ausgabe bietet ein dynamisches Erlebnis und erkundet Werke, Künstler, Strömungen und Technologien dieser Kunstform." },
+	  { "Title": "Notaufnahme von Lodi", "Category": "Orientierungssystem", "year": "2024", "description": "Ich habe bei Studio 100km mit Luigi Farrauto an der Neugestaltung des Leitsystems für die Notaufnahme in Lodi, Italien, mitentwickelt, um dessen Klarheit und Zugänglichkeit durch überarbeitete Symbole und Beschilderung zu verbessern." },
+	  { "Title": "Oscar Display Variable", "Category": "Type Design", "year": "2025",     "description": "Oscar Display ist eine variable Schrift, die auf einer quadratischen Grundlage mit abgerundeten Ecken basiert und sich über neun Strichstärken von Dünn bis Schwarz erstreckt. Sie wechselt zwischen aufrecht, kursiv bei 17° und geneigt bei 34° und bewegt sich in strenger Geometrie, die sich in Richtung Bewegung beugt. Ein System von Glyphen, das sich dehnt und zusammenzieht und Rhythmus durch Form trägt." }
+
+	]
+  }
+  

@@ -1,0 +1,80 @@
+	{
+	"index": {
+		"title": "Matteo Postinghel",
+		"collab": "Collaborators",
+		"meta": {
+			"keywords": "Communication Design, Branding, Wayfinding, Editorial Design, Coding, Milan Designer, Munich Designer, Matteo, Transformation Design, Politecnico di Milano, Web designer, UI/UX, Graphic design, Creative Coding, Speculative design, Cartography, English, French, German, Italian, Belgian, Milan, Munich",
+			"description": "Communication Designer based in Milan, specializing in branding, coding, wayfinding and editorial design.",
+			"url": "https://matteopostinghel.com"
+			}
+		},
+	"nav": {
+	  "contact": "Contact",
+	  "cookie": "By browsing this site, you automatically accept cookies."
+	},
+	"about":{
+		"age": "years old visual and digital system designer and design researcher, intersecting a human centered approach and new technologies from Munich based in Milan.",
+		"ongoing": "ongoing",
+		"tbd": "to be defined",
+		"months": [
+			"jan.",
+			"feb.",
+			"mar.",
+			"apr.",
+			"may.",
+			"jun.",
+			"jul.",
+			"aug.",
+			"sep.",
+			"oct.",
+			"nov.",
+			"dec."
+		],
+		"experience": [
+			"Experience",
+			"Interaction designer intern at ",
+			"Graphic designer intern at ",
+			"Graphic designer intern at "
+		],
+		"education": [
+			"Education",
+			"MSc, Communication design at ",
+			"BSc, Communication design at ",
+			"BA, Transformation design at ",
+			"School of Design",
+			"Visting Student at "
+		],
+		"languages": [
+			"Languages",
+			"French",
+			"German",
+			"Italian",
+			"English",
+			"Spanish"
+		],
+		"exhibition": [
+			"Exhibition",
+			"Featured in ",
+			", at "
+		],
+		"cv": "Full curriculum on request"
+	},
+	"projects": [
+	  { "Title": "Energyoo", "Category": "Visual Identity", "year": "2024", "description": "Branding for a startup focused on sustainable, interchangeable batteries."},
+	  { "Title": "By.it", "Category": "Web Design", "year": "2024", "description": "E-commerce site for discontinued products, accessible in dark mode only in the evening, revealing secrets and stories about the products."},
+	  { "Title": "RawScenarios", "Category": "Web Design", "year": "2024", "description": "Website for the exhibition “Raw Scenarios: Reflection on Human Overconsumption” at Dotdotdot, informing visitors and archiving the projects displayed."},
+	  { "Title": "Cinema and Photography", "Category": "Publishing", "year": "2024", "description": "Two editorial books explore cinema and photography: one dedicated to John Heartfield, pioneer of Dadaist political photomontage, and the other to “Emak Bakia” by Man Ray, a key work of surrealist cinema."},
+	  { "Title": "Neptuna", "Category": "Speculative Design", "year": "2024", "description": "Neptuna is a speculative design thesis project that addresses the issues surrounding tuna production in the context of climate change. Through ironic and symbolic snacks and a slow distribution experience, it invites reflection on the environmental costs of consumer choices"},
+	  { "Title": "Cremona Luthier", "Category": "Visual Identity", "year": "2023", "description": "Complete rebranding of the traditional violin craftsmanship in Cremona, an intangible UNESCO heritage. From the logo to visual communication, including wayfinding, social media, and merchandise, the project creates a cohesive and recognizable identity."},
+	  { "Title": "Milan Metro Map", "Category": "Cartography", "year": "2023", "description": "I contributed to the concept for the new Milan metro map for 100km Studio, redesigned with a layout that combines a central geographic area and schematic outer zones for the stations. @100km Studio"},
+	  { "Title": "100km Studio", "Category": "Web Design", "year": "2023", "description": "At Studio 100km, I collaborated with Luigi Farrauto to update the website, refreshing its look and projects. @100km Studio"},
+	  { "Title": "Anatomy of the Orchestra", "Category": "Web Design", "year": "2022", "description": "Website dedicated to the structure of an orchestra and its elements."},
+	  { "Title": "Representation of the Absence and Essence of Blackness", "Category": "Publishing", "year": "2021", "description": "A visual essay book that explores the shades of black, from its scientific composition to the deep emotions of artists, giving voice to their inner states through typography."},
+	  { "Title": "The Passenger", "Category": "Publishing", "year": "2024", "description": "I contributed to the creation of the maps for The Passenger Alps and London." },
+	  { "Title": "Design Spaziale Italiano", "Category": "Web Design", "year": "2024", "description": "I contributed to developing the website for the visual identity of Italian spatial design." },
+	  { "Title": "Kinesis", "Category": "Publishing", "year": "2024", "description": "The editorial project is structured as a series of magazines entirely dedicated to analog and digital kinetic art. Each issue offers a dynamic experience, exploring works, artists, movements, and technologies of this artistic expression." },
+	  { "Title": "Emergency department of Lodi", "Category": "Wayfinding", "year": "2024", "description": "At Studio 100km, I contributed with Luigi Farrauto to the restyling of the wayfinding system for the emergency department di Lodi in Italy, enhancing it's clarity and accessibility through redesigned icons and signage." },
+	  { "Title": "Oscar Display Variable", "Category": "Type Design", "year": "2025", "description": "Oscar Display is a variable typeface built on a square foundation with rounded corners, expanding across nine weights from thin to black. shifting between upright, italic at 17°, and slanted at 34°, it moves within strict geometry while bending toward motion. a system of glyphs that stretches and contracts, carrying rhythm through form." }
+	]
+  }
+  

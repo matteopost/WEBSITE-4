@@ -1,0 +1,73 @@
+---
+import { astroI18n, l } from "astro-i18n";
+
+interface Props {
+	showCurrent: boolean;
+	labels: {
+		[locale: string]: string;
+	};
+}
+
+const { showCurrent = true, labels = {} } = Astro.props;
+
+const params: Record<string, string> = {};
+for (const [key, value] of Object.entries(Astro.params)) {
+	if (value === undefined) continue;
+	params[key] = String(value);
+}
+
+let links = astroI18n.locales.map((locale) => ({
+	locale,
+	href: l(Astro.url.pathname, params, {
+		targetLocale: locale,
+	}),
+	label: labels[locale] || locale.toUpperCase(),
+}));
+
+if (!showCurrent) {
+	links = links.filter((link) => link.locale !== astroI18n.locale);
+}
+
+const currentLocale = astroI18n.locale;
+const currentLanguage = links.find((link) => link.locale === currentLocale);
+const otherLanguages = links.filter((link) => link.locale !== currentLocale);
+---
+
+<nav id="language-switcher">
+	<ul class="grid grid-cols-4">
+		<li>
+			<a href={currentLanguage?.href} class="underline" onclick="toggleDropdown(event)">
+				{currentLanguage?.label}
+			</a>
+		</li>
+		<div id="dropdown" class="col-span-3 grid grid-cols-3">
+			{otherLanguages.map(({ href, label, locale }) => (
+				<li class="">
+					<a href={href} class="hover:underline no-underline" data-locale={locale}>
+						{label}
+					</a>
+				</li>
+			))}
+		</div>
+	</ul>
+</nav>
+
+<script is:inline>
+ document.querySelectorAll("#dropdown a").forEach(link => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const locale = event.target.getAttribute("data-locale");
+      if (!locale) return;
+
+      document.querySelector("#language-switcher > ul > li > a").innerText = {
+        it: "IT",
+        en: "EN"
+      }[locale] || locale.toUpperCase();
+
+      document.getElementById("dropdown")?.classList.add("hidden");
+
+      window.location.href = event.target.getAttribute("href");
+    });
+  });
+  </script>
+  

@@ -1,0 +1,242 @@
+---
+import LanguageSwitcher1 from "./LanguageSwitcher-1.astro";
+import LanguageSwitcher2 from "./LanguageSwitcher-2.astro";
+import { astroI18n, t } from "astro-i18n";
+astroI18n.locale;
+
+
+const birthDate = new Date(2000, 11, 4); 
+const today = new Date();
+let age = today.getFullYear() - birthDate.getFullYear();
+const isBeforeBirthdayThisYear = today.getMonth() < birthDate.getMonth() || 
+    (today.getMonth() === birthDate.getMonth() && today.getDate() < birthDate.getDate());
+if (isBeforeBirthdayThisYear) {
+    age--; 
+}
+---
+
+<!-- x-cloak 
+x-transition:enter="transition transform ease-out duration-300"
+x-transition:enter-start="opacity-50"
+x-transition:enter-end="opacity-100"
+x-transition:leave="transition transform ease-in duration-200"
+x-transition:leave-start=" opacity-100"
+x-transition:leave-end="opacity-50" -->
+
+<!-- x-cloak 
+x-transition:enter="transition transform ease-out duration-300"
+x-transition:enter-start="-translate-y-1 opacity-50"
+x-transition:enter-end="translate-y-0 opacity-100"
+x-transition:leave="transition transform ease-in duration-200"
+x-transition:leave-start="translate-y-0 opacity-100"
+x-transition:leave-end="-translate-y-1 opacity-50" -->
+
+
+<nav x-data="{ showAbout: false }">
+    <div class="max-md:hidden grid grid-cols-12 w-full fixed px-2 pt-2 z-40 justify-between items-start  " transition:persist >
+        <div class="col-span-9 ">
+
+            <div class="grid grid-cols-9">
+                <div class="col-span-2"><a @click="showAbout = !showAbout" class="cursor-pointer sm:hover:opacity-40 transition-opacity ">Matteo Postinghel</a></div>
+                <p x-show="showAbout" 
+                @click.away="showAbout = false"  
+                x-cloak
+                class="col-span-7 max-w-2xl"
+                >
+                    {age} {t("about.age")}</p>
+            </div>
+
+            <div 
+            x-cloak
+            x-show="showAbout" 
+            class="space-y-1 mt-2 hyphens-auto ">
+                <div class="grid grid-cols-9">
+                    <p class="col-span-2">{t("about.experience.0")}</p>
+                    <p class="col-span-7">{t("about.experience.1")}<a href="https://propp.it/" target="_blank" class="opacity-100 hover:opacity-50 transition-opacity hyphens-auto">Propp Studio</a> [{t("about.months.1")} 2024 - {t("about.months.11")} 2024]</p>
+                    <p class="col-span-2"></p>
+                    <p class="col-span-7">{t("about.experience.2")}<a href="https://100km.studio/" target="_blank" class="opacity-100 hover:opacity-50 transition-opacity hyphens-auto">100km Studio</a> [{t("about.months.6")} 2022 - {t("about.months.8")} 2023]</p>
+                    <p class="col-span-2"></p>
+                    <p class="col-span-7">{t("about.experience.3")}<a href="https://www.labirinto.net/" target="_blank" class="opacity-100 hover:opacity-50 transition-opacity hyphens-auto">Labirinto</a> [{t("about.months.10")} 2019]</p>
+                </div>
+                <div class="grid grid-cols-9">
+                    <p class="col-span-2">{t("about.education.0")}</p>
+                    <p class="col-span-7">{t("about.education.5")}<a href="https://senseable.mit.edu" target="_blank" class="opacity-100 hover:opacity-50 transition-opacity hyphens-auto"> MIT Senseable City Lab</a> [{t("about.months.0")} 2026 - {t("about.months.6")} 2026]</p>
+                    <p class="col-span-2"></p>
+                    <p class="col-span-7"><a href="https://www.asp-poli.it/" target="_blank" class="opacity-100 hover:opacity-50 transition-opacity hyphens-auto">Alta Scuola Politecnica - XXI</a> [{t("about.months.1")} 2025 - {t("about.ongoing")}]</p>
+                    <p class="col-span-2"></p>
+                    <p class="col-span-7">{t("about.education.1")}<a href="https://www.designdellacomunicazione.polimi.it/" target="_blank" class="opacity-100 hover:opacity-50 transition-opacity hyphens-auto">Politecnico di Milano, {t("about.education.4")}</a> [{t("about.months.8")} 2024 - {t("about.ongoing")}]</p>
+                    <p class="col-span-2"></p>
+                    <p class="col-span-7">{t("about.education.2")}<a href="https://www.designdellacomunicazione.polimi.it/" target="_blank" class="opacity-100 hover:opacity-50 transition-opacity hyphens-auto">Politecnico di Milano, {t("about.education.4")}</a> [{t("about.months.8")} 2021 - {t("about.months.7")} 2024]</p>
+                    <p class="col-span-2"></p>
+                    <p class="col-span-7">{t("about.education.3")}<a href="https://www.wdka.nl/programmes/transformation-design" target="_blank" class="opacity-100 hover:opacity-50 transition-opacity hyphens-auto">Willem de Kooning Academy</a> [{t("about.months.8")} 2020 - {t("about.months.6")} 2021]</p>
+                </div>
+                <div class="grid grid-cols-9">
+                    <p class="col-span-2">{t("about.languages.0")}</p>
+                    <p class="col-span-7">{t("about.languages.1")} (C2), {t("about.languages.2")} (C2), {t("about.languages.3")} (C2), {t("about.languages.4")} (C2), {t("about.languages.5")} (A2)</p>
+                </div>
+                <div class="grid grid-cols-9">
+                    <p class="col-span-2">{t("about.exhibition.0")}</p>
+                    <p class="col-span-7">{t("about.exhibition.1")}<a href="https://www.interdependence.polimi.it" target="_blank"class="opacity-100 hover:opacity-50 transition-opacity">Interdependence Design</a>{t("about.exhibition.2")} Milan Design Week 2025</p>
+                    <p class="col-span-2"></p>
+                    <p class="col-span-7">{t("about.exhibition.1")}<a href="http://rawscenarios.labsintesi-c1.info/" target="_blank"class="opacity-100 hover:opacity-50 transition-opacity">Raw Scenarios</a>{t("about.exhibition.2")}<a href="https://www.dotdotdot.it/" target="_blank"class="sm:hover:opacity-40 transition-opacity">DotDotDot</a></p>
+                </div>
+                <div class="grid grid-cols-9">
+                    <p class="col-span-2">{t("nav.contact")}</p>
+                    <div class="col-span-4 ">
+                        <div class="flex gap-3">
+                            <div class="col-span-1"><a href="mailto:matteopostinghel@icloud.com" class="opacity-100 hover:opacity-50 transition-opacity">Email</a></div>
+                            <div class="col-span-1"><a href="https://www.linkedin.com/in/matteo-postinghel/" class="opacity-100 hover:opacity-50 transition-opacity" target="_blank">Linked-In</a></div>
+                            <div class="col-span-1"><a href="https://www.instagram.com/matteopostinghel/" class="opacity-100 hover:opacity-50 transition-opacity" target="_blank">Instagram</a></div>
+                        </div>
+                        <p>{t("about.cv")}</p>
+                    </div>
+                    <!-- <div class="col-span-1"><a href="/pdf/Curriculum Matteo Postinghel.pdf" download class="hover:opacity-40 transition-opacity">Curriculum</a></div> -->
+                </div>
+            </div>
+
+
+            <div 
+                x-data="{ showCookie: localStorage.getItem('cookieAccepted') !== 'true' }" 
+                class=" mt-4">
+                
+                <div 
+                    x-show="showCookie" 
+                    x-cloak 
+                    x-transition.opacity.duration.150ms 
+                    class="max-w-72">
+                    
+                    <p>{t("nav.cookie")}</p>
+                    <button 
+                        @click="showCookie = false; localStorage.setItem('cookieAccepted', 'true')" 
+                        class="rotate-45 transform cursor-pointer hover:opacity-40 transition-colors">+</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-span-2 items-center  relative">
+            <LanguageSwitcher1 showCurrent={true} labels={{ en: "EN", it: "IT" }} />
+        </div>
+
+        <div class="justify-end items-center pt-[1px] ml-auto">
+            <button 
+                @click="darkMode = !darkMode"
+                class="size-[14px] rounded-full flex items-center justify-center transition-colors bg-text"
+                aria-label="Toggle Dark Mode">
+            </button>
+            <!-- <LanguageSwitcher1 showCurrent={true} labels={{ en: "EN", it: "IT" }} /> -->
+        </div>
+
+    </div>
+
+
+
+    <!-- Mobile -->
+    <div class="md:hidden grid grid-cols-4 w-full fixed px-2 pt-2 z-40 justify-between items-start"  :style="showAbout ? 'background-color: var(--background); height: 100%;' : 'background-color: var(--background);'" transition:persist >
+        <div class="col-span-4">
+
+            <div class="grid grid-cols-4">
+                <div class="col-span-2"><a @click="showAbout = !showAbout; window.scrollTo({ top: 0})" class="cursor-pointer sm:hover:opacity-40 transition-opacity ">Matteo Postinghel</a></div>
+                <div class="items-center col-span-2  relative">
+                    <LanguageSwitcher2  showCurrent={true} labels={{ en: "EN", it: "IT" }}/>
+                </div>
+                <div class="col-span-2"></div>
+                <p x-show="showAbout" 
+                x-cloak 
+                class="col-span-2 mt-2">{age} {t("about.age")}</p>
+            </div>
+
+            <div 
+            x-cloak
+            x-show="showAbout" 
+            @click.away="showAbout = false"  
+            class="space-y-1 my-2 hyphens-auto ">
+                <div class="grid grid-cols-4 gap-y-1" x-data="{ showMore1: false }">
+                    <p class="col-span-2">{t("about.experience.0")}</p>
+                    <p class="col-span-2">{t("about.experience.1")}
+                        <a href="https://propp.it/" target="_blank" class="underline hover:no-underline transition-all hyphens-auto">
+                            Propp Studio
+                        </a> 
+                        [{t("about.months.1")} 2024 - {t("about.months.11")} 2024]
+                    </p>
+                    <div class="grid grid-cols-4 col-span-4 gap-y-1" 
+                        x-show="showMore1" 
+                        @click.away="showMore1 = false"  
+                        >
+                        <p class="col-span-2"></p>
+                        <p class="col-span-2">{t("about.experience.2")}<a href="https://100km.studio/" target="_blank" class="underline hover:no-underline transition-all hyphens-auto">100km Studio</a> [{t("about.months.6")} 2022 - {t("about.months.8")} 2023]</p>
+                        <p class="col-span-2"></p>
+                        <p class="col-span-2">{t("about.experience.3")}<a href="https://www.labirinto.net/" target="_blank" class="underline hover:no-underline transition-all hyphens-auto">Labirinto</a> [{t("about.months.10")} 2019]</p>
+                    </div>
+                    <div class="col-span-2"></div>
+                    <div class="opacity-50 hover:opacity-100 transition-opacity cursor-pointer" @click="showMore1 = !showMore1"><span x-text="showMore1 ? '-' : '+'"></span></div>
+                </div>
+                <div class="grid grid-cols-4 gap-y-1" x-data="{ showMore2: false }">
+                    <p class="col-span-2">{t("about.education.0")}</p>
+                    <p class="col-span-2">{t("about.education.5")}<a href="https://senseable.mit.edu" target="_blank" class="underline hover:no-underline transition-all hyphens-auto"> MIT Senseable City Lab</a> [{t("about.months.0")} 2026 - {t("about.months.6")} 2026]</p>
+                    <p class="col-span-2"></p>
+                    <p class="col-span-2"><a href="https://www.asp-poli.it/" target="_blank" class="underline hover:no-underline transition-all hyphens-auto">Alta Scuola Politecnica - XXI</a> [{t("about.months.1")} 2024 - {t("about.ongoing")}]</p>
+                    <p class="col-span-2"></p>
+                    <p class="col-span-2">{t("about.education.1")}<a href="https://www.designdellacomunicazione.polimi.it/" target="_blank" class="underline hover:no-underline transition-all hyphens-auto">Politecnico di Milano, {t("about.education.4")}</a> [{t("about.months.8")} 2024 - {t("about.ongoing")}]</p>
+                    
+                    <div class="grid grid-cols-4 col-span-4 gap-y-1" 
+                    x-show="showMore2" 
+                    @click.away="showMore2 = false"  
+                    >
+                    
+                        <p class="col-span-2"></p>
+                        <p class="col-span-2">{t("about.education.2")}<a href="https://www.designdellacomunicazione.polimi.it/" target="_blank" class="underline hover:no-underline transition-all">Politecnico di Milano, {t("about.education.4")}</a> [{t("about.months.8")} 2021 - {t("about.months.7")} 2024]</p>
+                        <p class="col-span-2"></p>
+                        <p class="col-span-2">{t("about.education.3")}<a href="https://www.wdka.nl/programmes/transformation-design" target="_blank" class="underline hover:no-underline transition-all">Willem de Kooning Academy</a> [{t("about.months.8")} 2020 - {t("about.months.6")} 2021]</p>
+                    </div>
+                   
+                    <div class="col-span-2"></div>
+                    <div class="opacity-50 hover:opacity-100 transition-opacity cursor-pointer" @click="showMore2 = !showMore2"><span x-text="showMore2 ? '-' : '+'"></span></div>
+                </div>
+                <div class="grid grid-cols-4">
+                    <p class="col-span-2">{t("about.languages.0")}</p>
+                    <p class="col-span-2">{t("about.languages.1")} (C2), {t("about.languages.2")} (C2), {t("about.languages.3")} (C2), {t("about.languages.4")} (C2), {t("about.languages.5")} (A2)</p>
+                </div>
+                <div class="grid grid-cols-4 gap-y-1">
+                    <p class="col-span-2">{t("about.exhibition.0")}</p>
+                    <p class="col-span-2">{t("about.exhibition.1")}<a href="https://www.interdependence.polimi.it" target="_blank"class="underline hover:no-underline transition-all">Interdependence Design</a>{t("about.exhibition.2")} Milan Design Week 2025</p>
+                    <p class="col-span-2"></p>
+                    <p class="col-span-2">{t("about.exhibition.1")}<a href="http://rawscenarios.labsintesi-c1.info/" target="_blank"class="underline hover:no-underline transition-all">Raw Scenarios</a>{t("about.exhibition.2")}<a href="https://www.dotdotdot.it/" target="_blank"class="underline hover:no-underline transition-all">DotDotDot</a></p>
+                </div>
+                <div class="grid grid-cols-4">
+                    <p class="col-span-2">{t("nav.contact")}</p>
+                    <div class="col-span-2 ">
+                        <div class="flex gap-3">
+                            <div><a href="mailto:matteopostinghel@icloud.com" class="underline hover:no-underline transition-all">Email</a></div>
+                            <div><a href="https://www.linkedin.com/in/matteo-postinghel/" class="underline hover:no-underline transition-all" target="_blank">Linked-In</a></div>
+                            <div><a href="https://www.instagram.com/matteopostinghel/" class="underline hover:no-underline transition-all" target="_blank">Instagram</a></div>
+                            <!-- <div><a href="/pdf/Curriculum Matteo Postinghel.pdf" download class="underline hover:no-underline transition-all">Curriculum</a></div> -->
+                        </div>
+                        <p>{t("about.cv")}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        
+        <div 
+        x-data="{ showCookie: localStorage.getItem('cookieAccepted') !== 'true' }" 
+        class=" mt-4 col-span-4">
+        
+        <div 
+            x-show="showCookie" 
+            x-cloak 
+                x-transition.opacity.duration.150ms 
+                class="max-w-72">
+                
+                <p>{t("nav.cookie")}</p>
+                <button 
+                @click="showCookie = false; localStorage.setItem('cookieAccepted', 'true')" 
+                class="rotate-45 transform cursor-pointer hover:opacity-40 transition-colors">+</button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+

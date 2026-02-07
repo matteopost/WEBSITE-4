@@ -1,0 +1,110 @@
+---
+import { astroI18n, t } from "astro-i18n";
+import { ViewTransitions } from "astro:transitions";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+const currentLocale = astroI18n.locale;
+---
+
+<!doctype html>
+<html lang={currentLocale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{t("index.title")}</title>
+
+    <meta name="description" content={t("index.meta.description")} />
+    <meta name="keywords" content={t("index.meta.keywords")} />
+    <meta name="author" content="Matteo Postinghel" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="content-language" content={currentLocale} />
+
+    <meta property="og:title" content={t("index.title")} />
+    <meta property="og:description" content={t("index.meta.description")} />
+    <meta property="og:image" content="/card/card.png" />
+    <meta property="og:url" content={t("index.meta.url")} />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={t("index.title")} />
+    <meta name="twitter:description" content={t("index.meta.description")} />
+    <meta name="twitter:image" content="/card/card.png" />
+
+    <link rel="icon" href="/favicon.png" />
+    <link rel="stylesheet" href="https://use.typekit.net/lze6fdf.css" />
+
+	<script type="module">
+		import Alpine from "https://unpkg.com/alpinejs@3.x.x/dist/module.esm.js";
+
+		window.Alpine = Alpine;
+
+		Alpine.store("openState", {
+			openCompNum: null,
+		});
+
+		Alpine.start();
+	</script>
+
+    <script is:inline>
+      (() => {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "dark") {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZL76RB7TNY"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-ZL76RB7TNY");
+    </script>
+
+    <ViewTransitions />
+  </head>
+
+  <body
+    class="no-scrollbar"
+    x-data="{ darkMode: document.documentElement.classList.contains('dark') }"
+    :class="{ 'dark': darkMode }"
+  >
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    @apply antialiased tracking-tight;
+    --background: #ffffff;
+    --text: #060606;
+  }
+
+  .dark {
+    --background: #060606;
+    --text: #f6f6f6;
+  }
+
+  body {
+    @apply text-xs md:text-sm xl:text-base;
+    background-color: var(--background);
+    color: var(--text);
+  }
+  /* text-xs md:text-sm xl:text-base */
+
+  @font-face {
+    font-family: "Oracle";
+    src: url(/font/ABCOracleEdu-Bold.woff2);
+  }
+
+  [x-cloak] {
+    display: none !important;
+  }
+</style>

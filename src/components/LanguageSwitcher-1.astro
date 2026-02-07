@@ -1,0 +1,74 @@
+---
+import { astroI18n, l } from "astro-i18n";
+
+interface Props {
+	showCurrent: boolean;
+	labels: {
+		[locale: string]: string;
+	};
+}
+
+const { showCurrent = true, labels = {} } = Astro.props;
+
+const params: Record<string, string> = {};
+for (const [key, value] of Object.entries(Astro.params)) {
+	if (value === undefined) continue;
+	params[key] = String(value);
+}
+
+let links = astroI18n.locales.map((locale) => ({
+	locale,
+	href: l(Astro.url.pathname, params, {
+		targetLocale: locale,
+	}),
+	label: labels[locale] || locale.toUpperCase(),
+}));
+
+if (!showCurrent) {
+	links = links.filter((link) => link.locale !== astroI18n.locale);
+}
+
+const currentLocale = astroI18n.locale;
+const currentLanguage = links.find((link) => link.locale === currentLocale);
+const otherLanguages = links.filter((link) => link.locale !== currentLocale);
+---
+
+<nav id="language-switcher">
+	<ul class="flex flex-col text-left">
+		<li>
+			<a href={currentLanguage?.href} class="sm:hover:opacity-50" onclick="toggleDropdown(event)">
+				{currentLanguage?.label}
+			</a>
+		</li>
+		<div
+			id="dropdown"
+			class="invisible transform transition-all ease-out duration-300 opacity-0 -translate-y-1"
+		>
+			{otherLanguages.map(({ href, label, locale }) => (
+				<li>
+					<a href={href} class="sm:hover:opacity-50" data-locale={locale}>
+						{label}
+					</a>
+				</li>
+			))}
+		</div>
+	</ul>
+</nav>
+
+<script is:inline>
+  function toggleDropdown(event) {
+    event.preventDefault();
+    const dropdown = document.getElementById("dropdown");
+    if (dropdown?.classList.contains("invisible")) {
+      dropdown.classList.remove("invisible", "opacity-0", "-translate-y-1");
+      dropdown.classList.add("opacity-100", "translate-y-0");
+    } else {
+      dropdown.classList.add("opacity-0", "-translate-y-1");
+      dropdown.classList.remove("opacity-100", "translate-y-0");
+      setTimeout(() => {
+        dropdown.classList.add("invisible");
+      }, 300); 
+    }
+  }
+</script>
+

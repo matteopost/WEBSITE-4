@@ -1,0 +1,81 @@
+{
+	"index": {
+		"title": "Matteo Postinghel",
+		"collab": "Collaborateur",
+		"meta": {
+			"keywords": "Design de Communication, Branding, Signalétique, Design Éditorial, Codage, Designer à Milan, Designer à Munich, Matteo, Design de Transformation, Politecnico di Milano, Web designer, UI/UX, Design graphique, Codage créatif, Design spéculatif, Cartographie, Anglais, Français, Allemand, Italien, Belge, Milan, Munich",
+			"description": "Designer de communication basé à Milan, spécialisé en branding, codage, signalétique et design éditorial.",
+			"url": "https://matteopostinghel.com/fr"
+			}
+	}, 
+	"nav": {
+	  "contact": "Contact",
+	  "cookie": "En naviguant sur ce site, vous acceptez automatiquement les cookies."
+	},
+	"about": {
+		"age": "ans, designer de systèmes visuels et digital et chercheur en design, croisant une approche human-centered et les nouvelles technologies, originaire de Munich basé à Milan.",
+		"ongoing": "en cours",
+		"tbd": "à définir",
+		"months": [
+			"jan.",
+			"fév.",
+			"mar.",
+			"avr.",
+			"mai.",
+			"juin.",
+			"juil.",
+			"août.",
+			"sept.",
+			"oct.",
+			"nov.",
+			"déc."
+		],
+		"experience": [
+			"Expérienc:",
+			"Stagiaire designer d'interaction chez ",
+			"Stagiaire designer graphiste chez ",
+			"Stagiaire designer graphiste chez "
+		],
+		"education": [
+			"Formation",
+			"MSc en Communication design à ",
+			"BSc en Communication design à ",
+			"BA en Transformation design à ",
+			"École de Design",
+			"Étudiant visiteur à "
+		],
+		"languages": [
+			"Langues",
+			"Français",
+			"Allemand",
+			"Italien",
+			"Anglais",
+			"Espagnol"
+		],
+		"exhibition": [
+			"Exposition",
+			"Présent dans ",
+			", chez "
+		],
+		"cv": "Curriculum complet sur demande"
+	},
+	"projects": [
+	  { "Title": "Energyoo", "Category": "Identité Visuelle", "year": "2024", "description": "Branding pour une startup de batteries interchangeables et durables."},
+	  { "Title": "By.it", "Category": "Design Web", "year": "2024", "description": "E-commerce pour des produits hors production, accessible en mode sombre uniquement le soir, révélant les secrets et histoires des produits."},
+	  { "Title": "RawScenarios", "Category": "Design Web", "year": "2024", "description": "Site web pour l'exposition « Raw Scenarios: Reflection on Human Overconsumption » chez Dotdotdot, informant les visiteurs et archivant les projets exposés."},
+	  { "Title": "Cinéma et Photographie", "Category": "Édition", "year": "2024", "description": "Deux livres d'édition explorent le cinéma et la photographie : l'un consacré à John Heartfield, pionnier du photomontage politique dadaïste, et l'autre à « Emak Bakia » de Man Ray, une œuvre clé du cinéma surréaliste."},
+	  { "Title": "Neptuna", "Category": "Design Spéculatif", "year": "2024", "description": "Neptuna est un projet de thèse en design spéculatif qui aborde les problématiques de la production de thon dans le contexte du changement climatique. À travers des snacks ironiques et symboliques et une expérience de distribution lente, il invite à réfléchir aux coûts environnementaux des choix de consommation."},
+	  { "Title": "Luthier de Crémone", "Category": "Identité Visuelle", "year": "2023", "description": "Rebranding complet de l'artisanat traditionnel du violon à Crémone, un patrimoine immatériel de l'UNESCO. Du logo à la communication visuelle, en passant par la signalétique, les réseaux sociaux et les objets promotionnels, le projet crée une identité cohérente et reconnaissable."},
+	  { "Title": "Plan du Métro de Milan", "Category": "Cartographie", "year": "2023", "description": "J'ai contribué au concept de la nouvelle carte du métro de Milan pour le studio 100km, repensée avec une mise en page qui combine une zone centrale géographique et des zones extérieures schématiques pour les stations. @100km Studio"},
+	  { "Title": "Studio 100km", "Category": "Design Web", "year": "2023", "description": "Au Studio 100km, j'ai collaboré avec Luigi Farrauto pour mettre à jour le site, en renouvelant son apparence et ses projets. @100km Studio"},
+	  { "Title": "Anatomie de l'Orchestre", "Category": "Design Web", "year": "2022", "description": "Site web dédié à la structure d'un orchestre et à ses éléments."},
+	  { "Title": "Représentation de l'Absence et de l'Essence de la Noirceur", "Category": "Édition", "year": "2021", "description": "Livre-essai visuel qui explore les nuances du noir, de sa composition scientifique aux émotions profondes des artistes, donnant voix à leurs états intérieurs à travers la typographie."},
+	  { "Title": "The Passenger", "Category": "Édition", "year": "2024", "description": "J'ai contribué à la création des cartes pour The Passenger Alps et Londres." },
+	  { "Title": "Design Spaziale Italiano", "Category": "Design Web", "year": "2024", "description": "J'ai contribué au développement du site web pour l'identité visuelle du design spatial italien." },
+	  { "Title": "Kinesis", "Category": "Édition", "year": "2024", "description": "Le projet éditorial s'articule autour d'une collection de magazines entièrement dédiés à l'art cinétique analogique et numérique. Chaque numéro propose une expérience dynamique en explorant des œuvres, des artistes, des courants et des technologies de cette expression artistique." },
+	  { "Title": "Service des urgences de Lodi", "Category": "Signalétique", "year": "2024", "description": "Au Studio 100km, j’ai contribué  avec Luigi Farrauto à la refonte du système de signalétique du service des urgences de Lodi, en Italie, en améliorant sa clarté et son accessibilité grâce à des icônes et une signalétique repensées." },
+	  { "Title": "Oscar Display Variable", "Category": "Design Typographique", "year": "2025",   "description": "Oscar Display est une police variable construite sur une base carrée aux coins arrondis, s’étendant sur neuf graisses du fin au noir. Passant du style droit à l’italique à 17° et incliné à 34°, elle évolue dans une géométrie stricte tout en se pliant au mouvement. Un système de glyphes qui s’étire et se contracte, portant le rythme à travers la forme."}
+
+	]
+  }
+  
