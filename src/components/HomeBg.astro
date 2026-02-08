@@ -1,0 +1,27 @@
+---
+import { astroI18n, t } from "astro-i18n"
+astroI18n.locale 
+
+import backgroundVideo from "../assets/video/neptuna/VIDEO NETPUNA SITO 2.mp4";
+import { Image } from "astro:assets";
+import fallbackImage from "../assets/img/OscarDisplay/Oscar-Display-Portfolio-9.jpg";
+
+---
+
+<div class="fixed inset-0 -z-40">
+    <video
+        class="w-full h-full object-cover "
+        autoplay
+        muted
+        loop
+        playsinline
+    >
+        <source src={backgroundVideo} type="video/mp4" />
+    </video>
+
+    <Image
+        src={fallbackImage}
+        alt=""
+        class="absolute inset-0 w-full h-full object-cover hidden"
+    />
+</div>

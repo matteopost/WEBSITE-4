@@ -1,0 +1,41 @@
+---
+const items = [1, 2, 3]
+---
+<div class="mt-[100vh]">
+  {items.map(() => (
+    <section class="relative min-h-screen">
+
+      <h2 class="sticky top-1 left-1 p-4 text-white text-xl font-medium pointer-events-none">
+        Sticky title
+      </h2>
+
+
+        <div class="absolute inset-0 -z-20 flex overflow-x-auto no-scrollbar scroll-smooth aspect-video w-full">
+
+          <div class="relative h-full" style="width:300vw">
+
+            <img
+              src="https://picsum.photos/1600/900?random=1"
+              class="absolute left-0 top-0 h-full w-screen object-cover"
+              alt=""
+            />
+
+            <img
+              src="https://picsum.photos/1600/900?random=2"
+              class="absolute left-[100vw] top-0 h-full w-screen object-cover"
+              alt=""
+            />
+
+            <img
+              src="https://picsum.photos/1600/900?random=3"
+              class="absolute left-[200vw] top-0 h-full w-screen object-cover"
+              alt=""
+            />
+
+          </div>
+
+        </div>
+
+    </section>
+  ))}
+</div>
