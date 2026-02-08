@@ -43,9 +43,9 @@ const isLightBg = isLightColor(color);
 const textColorClass = isLightBg ? "text-black" : "text-white";
 ---
 
-<div class="w-full">
+<div class="h-full w-full">
 
-    <div class="md:sticky md:top-0 z-30 flex justify-between w-full p-[1px] md:p-1 text-white">
+    <div class="md:sticky md:top-0 z-30 flex justify-between w-full p-1 text-white">
         <div class="bg-black/75 backdrop-blur-xl rounded-md">
         <p class="px-2 py-1 uppercase">{Title}</p>
         </div>
@@ -55,10 +55,10 @@ const textColorClass = isLightBg ? "text-black" : "text-white";
         </div>
     </div>
 
-    <div class="-mt-10 -z-10 flex overflow-x-auto no-scrollbar scroll-smooth" style={`background-color: ${color};`}>
+    <div class="-mt-10 -z-10 flex flex-nowrap overflow-x-auto no-scrollbar aspect-video snap-x snap-mandatory" style={`background-color: ${color};`}>
 
         {video.map((v) => (
-        <div class="w-full h-full flex-shrink-0">
+        <div class="w-full h-full flex-shrink-0 aspect-video snap-center snap-always">
             <video
             src={v.src}
             muted
@@ -67,51 +67,53 @@ const textColorClass = isLightBg ? "text-black" : "text-white";
             playsinline
             preload="none"
             poster={v.poster}
-            class="w-full h-full object-cover aspect-video -ml-[1px]"
+            class="w-full h-full object-cover aspect-video"
             ></video>
         </div>
         ))}
 
         {images.map((img, index) => (
-        <div class="w-full h-full flex-shrink-0">
+        <div class="w-full h-full flex-shrink-0 aspect-video snap-center snap-always">
             <Image
             src={img}
             alt={`Image ${index + 1}`}
             width={1920}
             height={1080}
             format="webp"
-            class="w-full h-full object-cover aspect-video -ml-[1px]"
+            class="w-full h-full object-cover aspect-video"
             />
         </div>
         ))}
 
-        <div class="w-screen h-full flex flex-shrink-0 whitespace-nowrap leading-tight pt-10">
-            <div class={`whitespace-normal break-words max-w-[48%] pl-2 ${textColorClass}`}>
-                <p class="hyphens-auto">{description}</p>
-                {link && (
-                <a href={link} target="_blank" class="hover:underline transition-all whitespace-nowrap">
-                    → {linkText}
-                </a>
-                )}
-            </div>
-
-            <div
-                class={`sticky left-1/2 md:left-[calc(100%*(9/12))] max-w-[45%] md:max-w-[calc(100%*(2/12))] top-0 ${textColorClass}`}
-            >
-                {collaborators?.length > 0 && (
-                <>
-                    <p>{t("index.collab")}:</p>
-                    {collaborators.map((collab) =>
-                    collab.link ? (
-                        <a href={collab.link} target="_blank" class="block hover:underline transition-all">
-                        {collab.name}
-                        </a>
-                    ) : (
-                        <p>{collab.name}</p>
-                    )
+        <div class="w-screen h-full flex flex-shrink-0 whitespace-nowrap leading-tight snap-center">
+            <div class="pt-10 w-full">
+                <div class={`whitespace-normal break-words w-2/3 pl-2 ${textColorClass}`}>
+                    <p class="hyphens-auto text-[8px]">{description}</p>
+                    {link && (
+                    <a href={link} target="_blank" class="hover:underline transition-all whitespace-nowrap text-[8px]">
+                        → {linkText}
+                    </a>
                     )}
-                </>
-                )}
+                </div>
+    
+                <div
+                    class={` ${textColorClass}`}
+                >
+                    {collaborators?.length > 0 && (
+                    <>
+                        <p>{t("index.collab")}:</p>
+                        {collaborators.map((collab) =>
+                        collab.link ? (
+                            <a href={collab.link} target="_blank" class="block hover:underline transition-all text-[8px]">
+                            {collab.name}
+                            </a>
+                        ) : (
+                            <p>{collab.name}</p>
+                        )
+                        )}
+                    </>
+                    )}
+                </div>
             </div>
         </div>
 
