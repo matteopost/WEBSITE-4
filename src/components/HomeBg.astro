@@ -9,7 +9,28 @@ import fallbackImage from "../assets/img/OscarDisplay/Oscar-Display-Portfolio-9.
 ---
 
 <div class="fixed inset-0 -z-40">
-    <video
+
+
+    <style>
+        .vimeo-bg {
+            width: 177.77777778vh;
+            height: 56.25vw;
+            min-width: 100vw;
+            min-height: 100vh;
+        }
+    </style>
+
+    <div class="fixed inset-0 -z-10 overflow-hidden">
+        <iframe
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.01] pointer-events-none vimeo-bg"
+            src="https://player.vimeo.com/video/1163062053?autoplay=1&muted=1&loop=1&background=1&controls=0&title=0&byline=0&portrait=0&dnt=1"
+            allow="autoplay; fullscreen; picture-in-picture"
+            referrerpolicy="strict-origin-when-cross-origin"
+        ></iframe>
+    </div>
+
+
+    <!-- <video
         class="w-full h-full object-cover "
         autoplay
         muted
@@ -23,5 +44,5 @@ import fallbackImage from "../assets/img/OscarDisplay/Oscar-Display-Portfolio-9.
         src={fallbackImage}
         alt=""
         class="absolute inset-0 w-full h-full object-cover hidden"
-    />
+    /> -->
 </div>
