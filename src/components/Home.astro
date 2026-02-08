@@ -128,6 +128,8 @@ import OscarDisplay10  from '../../src/assets/img/OscarDisplay/Oscar-Display-Por
 import OscarDisplay11  from '../../src/assets/img/OscarDisplay/Oscar-Display-Portfolio-11.jpg';
 import OscarDisplay12  from '../../src/assets/img/OscarDisplay/Oscar-Display-Portfolio-12.jpg';
 
+import VideoOscarDisplay1  from '../../src/assets/video/oscar/OSCAR SANS PORTFOLIO WEBSITE 1.mp4'
+
 import type { ACTION_ERROR_CODES } from "astro:actions";
 
 const projects = [
@@ -136,10 +138,11 @@ const projects = [
         color: projectColors[10],
         Category: t("projects.14.Category"), 
         year: t("projects.14.year"), 
-        images: [OscarDisplay1, OscarDisplay2, OscarDisplay3, OscarDisplay4, OscarDisplay5, OscarDisplay6, OscarDisplay7, OscarDisplay8, OscarDisplay9, OscarDisplay10, OscarDisplay11, OscarDisplay12],
+        images: [ OscarDisplay2, OscarDisplay3, OscarDisplay4, OscarDisplay5, OscarDisplay6, OscarDisplay7, OscarDisplay8, OscarDisplay9, OscarDisplay10, OscarDisplay11, OscarDisplay12],
         description: t("projects.14.description"),
         link: "/zip/OscarDisplayVariable.zip",
         video: [
+            { src: VideoOscarDisplay1, poster: '../../src/assets/img/OscarDisplay/Oscar-Display-Portfolio-1.jpg' },
         ],
 
         linkText: "Download Font",
