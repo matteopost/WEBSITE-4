@@ -3,6 +3,20 @@ import HomeComp from "../components/HomeComp.astro";
 import Image from "astro:assets";
 import { t } from "astro-i18n";
 
+const projectColors = [
+  "#111111",
+  "#81be9f",
+  "#a75e4b",
+  "#d9305c",
+  "#cb412e",
+  "#e83526",
+  "#657c96",
+  "#459464",
+  "#2c23f4",
+  "#fef97e",
+  "#333333"
+];
+
 import img1 from '../../src/assets/img/cremona/cremona_20.png' ;
 import img2 from '../../src/assets/img/cremona/cremona_13.png';
 import img3 from '../../src/assets/img/cremona/cremona_18.png';
@@ -119,6 +133,7 @@ import type { ACTION_ERROR_CODES } from "astro:actions";
 const projects = [
     { 
         Title: t("projects.14.Title"), 
+        color: projectColors[10],
         Category: t("projects.14.Category"), 
         year: t("projects.14.year"), 
         images: [OscarDisplay1, OscarDisplay2, OscarDisplay3, OscarDisplay4, OscarDisplay5, OscarDisplay6, OscarDisplay7, OscarDisplay8, OscarDisplay9, OscarDisplay10, OscarDisplay11, OscarDisplay12],
@@ -135,6 +150,7 @@ const projects = [
 
     { 
         Title: t("projects.12.Title"), 
+        color: projectColors[9],
         Category: t("projects.12.Category"), 
         year: t("projects.12.year"), 
         images: [imgKinesis1, imgKinesis2, imgKinesis3, imgKinesis4, imgKinesis5, imgKinesis6, imgKinesis7],
@@ -156,6 +172,7 @@ const projects = [
 
     { 
         Title: t("projects.11.Title"), 
+        color: projectColors[8],
         Category: t("projects.11.Category"), 
         year: t("projects.11.year"), 
         images: [],
@@ -183,6 +200,7 @@ const projects = [
 
     { 
         Title: t("projects.10.Title"), 
+        color: projectColors[7],
         Category: t("projects.10.Category"), 
         year: t("projects.10.year"), 
         images: [imgTP1, imgTP2, imgTP3, imgTP4],
@@ -203,6 +221,7 @@ const projects = [
 
     {
         Title: t("projects.13.Title"), 
+        color: projectColors[6],
         Category: t("projects.13.Category"), 
         year: t("projects.13.year"), 
         images: [imgLodi1, imgLodi2, imgLodi3, imgLodi4, imgLodi5, imgLodi6, imgLodi8],
@@ -221,6 +240,7 @@ const projects = [
 
     { 
         Title: t("projects.1.Title"), 
+        color: projectColors[5],
         Category: t("projects.1.Category"), 
         year: t("projects.1.year"), 
         images: [],
@@ -248,6 +268,7 @@ const projects = [
 
     { 
         Title: t("projects.2.Title"), 
+        color: projectColors[4],
         Category: t("projects.2.Category"), 
         year: t("projects.2.year"), 
         images: [],
@@ -267,6 +288,7 @@ const projects = [
 
     { 
         Title: t("projects.4.Title"), 
+        color: projectColors[3],
         Category: t("projects.4.Category"), 
         year: t("projects.4.year"), 
         images: [imgNeptuna1, imgNeptuna2],
@@ -297,6 +319,7 @@ const projects = [
 
     { 
         Title: t("projects.5.Title"), 
+        color: projectColors[2],
         Category: t("projects.5.Category"), 
         year: t("projects.5.year"), 
         images: [],
@@ -322,6 +345,7 @@ const projects = [
 
     { 
         Title: t("projects.6.Title"), 
+        color: projectColors[1],
         Category: t("projects.6.Category"), 
         year: t("projects.6.year"), 
         images: [imgMappaMilano2, imgMappaMilano3, imgMappaMilano1, imgMappaMilano4, imgMappaMilano5, imgMappaMilano7, imgMappaMilano6],
@@ -338,6 +362,7 @@ const projects = [
 
     { 
         Title: t("projects.9.Title"), 
+        color: projectColors[0],
         Category: t("projects.9.Category"), 
         year: t("projects.9.year"), 
         images: [imgNero1, imgNero2],
@@ -356,8 +381,8 @@ const projects = [
 ];
 ---
 
-<div class="absolute bottom-0 left-0 right-0 h-[100vh] px-2 pb-2 pt-24 overflow-y-auto no-scrollbar flex flex-col max-md:pt-[90vh] max-md:pb-12">
-    <div class="mt-auto">
+<div class="mt-[100vh] overflow-y-auto no-scrollbar flex flex-col">
+    <div class="">
         {projects.map((project, index) => (
             <HomeComp 
                 Title={project.Title} 
@@ -370,6 +395,7 @@ const projects = [
                 link={project.link}
                 linkText={project.linkText}
                 collaborators={project.collaborators ?? []}
+                color={project.color}
             />
         ))}
     </div>

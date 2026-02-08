@@ -37,17 +37,17 @@ const currentLocale = astroI18n.locale;
     <link rel="icon" href="/favicon.png" />
     <link rel="stylesheet" href="https://use.typekit.net/lze6fdf.css" />
 
-	<script type="module">
-		import Alpine from "https://unpkg.com/alpinejs@3.x.x/dist/module.esm.js";
+    <script type="module">
+      import Alpine from "https://unpkg.com/alpinejs@3.x.x/dist/module.esm.js";
 
-		window.Alpine = Alpine;
+      window.Alpine = Alpine;
 
-		Alpine.store("openState", {
-			openCompNum: null,
-		});
+      Alpine.store("openState", {
+        openCompNum: null,
+      });
 
-		Alpine.start();
-	</script>
+      Alpine.start();
+    </script>
 
     <script is:inline>
       (() => {
@@ -72,7 +72,7 @@ const currentLocale = astroI18n.locale;
   </head>
 
   <body
-    class="no-scrollbar"
+    class="no-scrollbar bg-[#111111]"
     x-data="{ darkMode: document.documentElement.classList.contains('dark') }"
     :class="{ 'dark': darkMode }"
   >
@@ -81,6 +81,13 @@ const currentLocale = astroI18n.locale;
 </html>
 
 <style is:global>
+
+  * {
+    margin: 0;
+    padding: 0;
+    @apply no-scrollbar;
+  }
+
   :root {
     @apply antialiased tracking-tight;
     --background: #ffffff;
