@@ -2,6 +2,8 @@
 import { Image } from "astro:assets";
 import { t } from "astro-i18n";
 
+
+
 interface Props {
   Title: string;
   num: string;
@@ -82,11 +84,12 @@ const textColorClass = isLightBg ? "text-black" : "text-white";
             <Image
             src={img}
             alt={`Image ${index + 1}`}
-            width={1920}
-            height={1080}
+            widths={[640, 960, 1280, 1600, 1920]}
+            sizes="100vw"
             format="webp"
             loading={index === 0 ? "eager" : "lazy"}
             fetchpriority={index === 0 ? "high" : "auto"}
+            decoding="async"
             class="w-full h-full object-cover"
             />
         </div>
