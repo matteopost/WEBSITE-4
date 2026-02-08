@@ -62,32 +62,34 @@ const textColorClass = isLightBg ? "text-black" : "text-white";
     style={`background-color: ${color};`}
     data-media
   >
-    {video.map((v) => (
-      <div class="w-full h-full aspect-video flex-shrink-0 snap-center">
-        <video
-          src={v.src}
-          muted
-          autoplay
-          loop
-          playsinline
-          preload="none"
-          poster={v.poster}
-          class="w-full h-full object-cover"
-        ></video>
-      </div>
+    {video.map((v, index) => (
+        <div class="w-full h-full aspect-video flex-shrink-0 snap-center">
+            <video
+            src={v.src}
+            muted
+            autoplay
+            loop
+            playsinline
+            preload={index === 0 ? "auto" : "metadata"}
+            poster={v.poster}
+            class="w-full h-full object-cover"
+            ></video>
+        </div>
     ))}
 
     {images.map((img, index) => (
-      <div class="w-full h-full aspect-video flex-shrink-0 snap-center">
-        <Image
-          src={img}
-          alt={`Image ${index + 1}`}
-          width={1920}
-          height={1080}
-          format="webp"
-          class="w-full h-full object-cover"
-        />
-      </div>
+        <div class="w-full h-full aspect-video flex-shrink-0 snap-center">
+            <Image
+            src={img}
+            alt={`Image ${index + 1}`}
+            width={1920}
+            height={1080}
+            format="webp"
+            loading={index === 0 ? "eager" : "lazy"}
+            fetchpriority={index === 0 ? "high" : "auto"}
+            class="w-full h-full object-cover"
+            />
+        </div>
     ))}
 
     <!-- DESCRIPTION SLIDE -->
