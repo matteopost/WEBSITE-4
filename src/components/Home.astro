@@ -381,22 +381,20 @@ const projects = [
 ];
 ---
 
-<div class="my-[100vh] no-scrollbar flex flex-col">
-    <div class="">
-        {projects.map((project, index) => (
-            <HomeComp 
-                Title={project.Title} 
-                num={(index + 1).toString()}  
-                year={project.year} 
-                Category={project.Category} 
-                images={project.images ?? []}  
-                video={project.video ?? []} 
-                description={project.description}
-                link={project.link}
-                linkText={project.linkText}
-                collaborators={project.collaborators ?? []}
-                color={project.color}
-            />
-        ))}
-    </div>
+<div class="my-[100vh] no-scrollbar grid grid-cols-1 w-full">
+    {projects.map((project, index) => (
+        <HomeComp 
+            Title={project.Title} 
+            num={(index + 1).toString()}  
+            year={project.year} 
+            Category={project.Category} 
+            images={project.images ?? []}  
+            video={project.video ?? []} 
+            description={project.description}
+            link={project.link}
+            linkText={project.linkText}
+            collaborators={project.collaborators ?? []}
+            color={project.color}
+        />
+    ))}
 </div>
