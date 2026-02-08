@@ -30,7 +30,7 @@ const {
   color
 } = Astro.props;
 ---
-<div class="relative aspect-video w-full" style={`background-color: ${color};`} >
+<div class="relative aspect-video w-full -mb-[1px]" style={`background-color: ${color};`} >
 
   <!-- OVERLAY -->
   <div class="absolute inset-0 z-20 text-white mix-blend-difference leading-tight pointer-events-none">
@@ -124,32 +124,32 @@ const {
       </div>
     ))}
 
-     <div class="w-full md:w-[calc(100%*(11/12))] mt-6 flex flex-shrink-0 whitespace-nowrap leading-tight mix-blend-difference">
-            <div class="whitespace-normal break-words max-w-[48%] pl-2 mix-blend-difference">
-                <p class="hyphens-auto text-white mix-blend-difference">{description}</p>
-                {link && (
-                    <a href={link} target="_blank" class="hover:underline transition-all whitespace-nowrap text-white mix-blend-difference">
-                        &rarr; {linkText}
-                    </a>
-                )}
-            </div>
-            <div class="sticky left-1/2 md:left-[calc(100%*(9/12))] max-w-[45%] md:max-w-[calc(100%*(2/12))] top-0 mix-blend-difference">
-                {collaborators?.length > 0 && (
-                    <>
-                        <p class="text-white mix-blend-difference">{t("index.collab")}:</p>
-                        {collaborators.map((collab) => (
-                            collab.link ? (
-                                <a href={collab.link} target="_blank" class="block hover:underline transition-all text-white mix-blend-difference">
-                                    {collab.name}
-                                </a>
-                            ) : (
-                                <p class="text-white mix-blend-difference">{collab.name}</p>
-                            )
-                        ))}
-                    </>
-                )}
-            </div>
+    <div class="w-full md:w-[calc(100%*(11/12))] mt-6 flex flex-shrink-0 whitespace-nowrap leading-tight mix-blend-difference">
+        <div class="whitespace-normal break-words max-w-[48%] pl-2 mix-blend-difference">
+            <p class="hyphens-auto text-white mix-blend-difference">{description}</p>
+            {link && (
+                <a href={link} target="_blank" class="hover:underline transition-all whitespace-nowrap text-white mix-blend-difference">
+                    &rarr; {linkText}
+                </a>
+            )}
         </div>
+        <div class="sticky left-1/2 md:left-[calc(100%*(9/12))] max-w-[45%] md:max-w-[calc(100%*(2/12))] top-0 mix-blend-difference">
+            {collaborators?.length > 0 && (
+                <>
+                    <p class="text-white mix-blend-difference">{t("index.collab")}:</p>
+                    {collaborators.map((collab) => (
+                        collab.link ? (
+                            <a href={collab.link} target="_blank" class="block hover:underline transition-all text-white mix-blend-difference">
+                                {collab.name}
+                            </a>
+                        ) : (
+                            <p class="text-white mix-blend-difference">{collab.name}</p>
+                        )
+                    ))}
+                </>
+            )}
+        </div>
+    </div>
 
   </div>
 </div>
