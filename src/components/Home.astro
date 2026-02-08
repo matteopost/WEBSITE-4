@@ -140,7 +140,6 @@ const projects = [
         description: t("projects.14.description"),
         link: "/zip/OscarDisplayVariable.zip",
         video: [
-            { src: videoNeptuna8, poster: '../../src/assets/video/neptuna/poster/VIDEO NETPUNA SITO 8.webp' },
         ],
 
         linkText: "Download Font",
@@ -382,21 +381,19 @@ const projects = [
 ---
 
 <div class="py-[100vh] no-scrollbar ">
-    <div class="grid grid-cols-1 w-full ">
-        {projects.map((project, index) => (
-            <HomeComp 
-                Title={project.Title} 
-                num={(index + 1).toString()}  
-                year={project.year} 
-                Category={project.Category} 
-                images={project.images ?? []}  
-                video={project.video ?? []} 
-                description={project.description}
-                link={project.link}
-                linkText={project.linkText}
-                collaborators={project.collaborators ?? []}
-                color={project.color}
-            />
-        ))}
-    </div>
+    {projects.map((project, index) => (
+        <HomeComp 
+            Title={project.Title} 
+            num={(index + 1).toString()}  
+            year={project.year} 
+            Category={project.Category} 
+            images={project.images ?? []}  
+            video={project.video ?? []} 
+            description={project.description}
+            link={project.link}
+            linkText={project.linkText}
+            collaborators={project.collaborators ?? []}
+            color={project.color}
+        />
+    ))}
 </div>

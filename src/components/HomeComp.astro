@@ -6,7 +6,6 @@ interface Props {
   Title: string;
   num: string;
   year: string;
-  Category: string;
   images?: ImageMetadata[];
   video?: { src: string; poster: string }[];
   description: string;
@@ -20,7 +19,6 @@ const {
   Title,
   num,
   year,
-  Category,
   images = [],
   video = [],
   description,
@@ -29,6 +27,8 @@ const {
   collaborators = [],
   color
 } = Astro.props;
+
+const totalItems = video.length + images.length + 1;
 
 function isLightColor(hex: string) {
   const c = hex.replace("#", "");
@@ -42,90 +42,119 @@ function isLightColor(hex: string) {
 const isLightBg = isLightColor(color);
 const textColorClass = isLightBg ? "text-black" : "text-white";
 ---
+<div class="w-full aspect-video relative flex flex-col" data-project={num}>
 
-<div class="h-full w-full">
-
-    <div class="md:sticky md:top-0 z-30 flex justify-between w-full p-1 text-white">
-        <div class="bg-black/75 backdrop-blur-xl rounded-md">
-        <p class="px-2 py-1 uppercase">{Title}</p>
-        </div>
-
-        <div class="bg-black/60 backdrop-blur-xl rounded-md">
-        <p class="px-2 py-1 tabular-nums">{year}</p>
-        </div>
+  <!-- HEADER -->
+  <div class="md:sticky md:top-0 z-20 flex justify-between w-full p-1 pointer-events-none">
+    <div class="bg-black/75 backdrop-blur-xl rounded-md text-white">
+      <p class="px-2 py-1 uppercase">{Title}</p>
     </div>
-
-    <div class="-mt-10 -z-10 flex flex-nowrap overflow-x-auto no-scrollbar aspect-video snap-x snap-mandatory" style={`background-color: ${color};`}>
-
-        {video.map((v) => (
-        <div class="w-full h-full flex-shrink-0 aspect-video snap-center snap-always">
-            <video
-            src={v.src}
-            muted
-            autoplay
-            loop
-            playsinline
-            preload="none"
-            poster={v.poster}
-            class="w-full h-full object-cover aspect-video"
-            ></video>
-        </div>
-        ))}
-
-        {images.map((img, index) => (
-        <div class="w-full h-full flex-shrink-0 aspect-video snap-center snap-always">
-            <Image
-            src={img}
-            alt={`Image ${index + 1}`}
-            width={1920}
-            height={1080}
-            format="webp"
-            class="w-full h-full object-cover aspect-video"
-            />
-        </div>
-        ))}
-
-        <div class="w-screen h-full flex flex-shrink-0 whitespace-nowrap leading-tight snap-center">
-            <div class="pt-10 w-full">
-                <div class={`whitespace-normal break-words w-2/3 pl-2 ${textColorClass}`}>
-                    <p class="hyphens-auto text-[8px]">{description}</p>
-                    {link && (
-                    <a href={link} target="_blank" class="hover:underline transition-all whitespace-nowrap text-[8px]">
-                        → {linkText}
-                    </a>
-                    )}
-                </div>
-    
-                <div
-                    class={` ${textColorClass}`}
-                >
-                    {collaborators?.length > 0 && (
-                    <>
-                        <p>{t("index.collab")}:</p>
-                        {collaborators.map((collab) =>
-                        collab.link ? (
-                            <a href={collab.link} target="_blank" class="block hover:underline transition-all text-[8px]">
-                            {collab.name}
-                            </a>
-                        ) : (
-                            <p>{collab.name}</p>
-                        )
-                        )}
-                    </>
-                    )}
-                </div>
-            </div>
-        </div>
-
+    <div class="bg-black/60 backdrop-blur-xl rounded-md text-white">
+      <p class="px-2 py-1 tabular-nums">{year}</p>
     </div>
+  </div>
+
+  <!-- MEDIA STRIP -->
+  <div
+    class="-mt-10 -mb-1 flex overflow-x-auto no-scrollbar snap-x snap-mandatory aspect-video"
+    style={`background-color: ${color};`}
+    data-media
+  >
+    {video.map((v) => (
+      <div class="w-full h-full aspect-video flex-shrink-0 snap-center">
+        <video
+          src={v.src}
+          muted
+          autoplay
+          loop
+          playsinline
+          preload="none"
+          poster={v.poster}
+          class="w-full h-full object-cover"
+        ></video>
+      </div>
+    ))}
+
+    {images.map((img, index) => (
+      <div class="w-full h-full aspect-video flex-shrink-0 snap-center">
+        <Image
+          src={img}
+          alt={`Image ${index + 1}`}
+          width={1920}
+          height={1080}
+          format="webp"
+          class="w-full h-full object-cover"
+        />
+      </div>
+    ))}
+
+    <!-- DESCRIPTION SLIDE -->
+    <div class="w-full h-full flex-shrink-0 snap-center flex items-end">
+      <div class={`w-2/3 p-4 text-[10px] leading-tight ${textColorClass}`}>
+        <p class="hyphens-auto">{description}</p>
+
+        {link && (
+          <a href={link} target="_blank" class="underline">
+            → {linkText}
+          </a>
+        )}
+
+        {collaborators.length > 0 && (
+          <div class="mt-2">
+            <p>{t("index.collab")}:</p>
+            {collaborators.map((c) =>
+              c.link ? (
+                <a href={c.link} target="_blank" class="block underline">
+                  {c.name}
+                </a>
+              ) : (
+                <p>{c.name}</p>
+              )
+            )}
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+
+  <!-- INDICATOR -->
+  <div
+    class="w-full z-20 flex mix-blend-difference pointer-events-none"
+    data-dots
+  >
+    {Array.from({ length: totalItems }).map(() => (
+      <span class="h-[3px] flex-1 bg-white opacity-30"></span>
+    ))}
+  </div>
 </div>
 
-<style>
-  video,
-  img {
-    display: block;
-    backface-visibility: hidden;
-    transform: translateZ(0);
-  }
+<script is:inline>
+document.querySelectorAll("[data-project]").forEach(project => {
+  const scroller = project.querySelector("[data-media]");
+  const dots = project.querySelectorAll("[data-dots] span");
 
+  if (!scroller || dots.length === 0) return;
+
+  const update = () => {
+    const index = Math.round(scroller.scrollLeft / scroller.clientWidth);
+    dots.forEach((dot, i) => {
+      dot.style.opacity = i === index ? "1" : "0.3";
+    });
+  };
+
+  scroller.addEventListener("scroll", () => {
+    requestAnimationFrame(update);
+  });
+
+  update();
+});
+</script>
+
+<style>
+video,
+img {
+  display: block;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
 </style>
