@@ -13,6 +13,7 @@ interface Props {
   linkText: string;
   collaborators?: { name: string; link: string }[];
   color: string;
+  Category: string;
 }
 
 const {
@@ -25,7 +26,8 @@ const {
   link,
   linkText,
   collaborators = [],
-  color
+  color,
+  Category
 } = Astro.props;
 
 const totalItems = video.length + images.length + 1;
@@ -91,6 +93,7 @@ const textColorClass = isLightBg ? "text-black" : "text-white";
     <!-- DESCRIPTION SLIDE -->
     <div class="w-full h-full flex-shrink-0 snap-center flex items-end">
       <div class={`w-2/3 p-4 text-[10px] leading-tight ${textColorClass}`}>
+        <p class="hyphens-auto">{Category}</p>
         <p class="hyphens-auto">{description}</p>
 
         {link && (
