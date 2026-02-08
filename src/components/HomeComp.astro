@@ -43,7 +43,7 @@ const isLightBg = isLightColor(color);
 const textColorClass = isLightBg ? "text-black" : "text-white";
 ---
 
-<div class="w-full">
+<div class="w-screen">
 
   <div class="sticky top-0 z-10 flex justify-between w-full p-1 text-white">
     <div class="bg-black/75 backdrop-blur-xl rounded-md">
@@ -119,6 +119,8 @@ const textColorClass = isLightBg ? "text-black" : "text-white";
     </div>
 
   </div>
+
+
 </div>
 
 <style>
@@ -128,4 +130,5 @@ const textColorClass = isLightBg ? "text-black" : "text-white";
     backface-visibility: hidden;
     transform: translateZ(0);
   }
+
 </style>
