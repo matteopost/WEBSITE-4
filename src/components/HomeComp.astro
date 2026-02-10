@@ -50,9 +50,9 @@ const textColorClass = isLightColor(color) ? "text-black" : "text-white";
 >
 
   <!-- HEADER -->
-  <div class="md:sticky md:top-0 z-30 flex justify-between w-full p-1 pointer-events-none">
+  <div class="md:sticky top-1 md:top-0 mb-1 sm:mb-1 md:mb-1 lg:mb-1 xl:mb-2 2xl:mb-3 z-30 flex justify-between w-full p-1 pointer-events-none">
     <div class="bg-black/75 backdrop-blur-xl rounded-md text-white">
-      <p class="px-2 py-1 uppercase">{Title}</p>
+      <p class="px-2 py-1 uppercase ">{Title}</p>
     </div>
     <div class="bg-black/60 backdrop-blur-xl rounded-md text-white">
       <p class="px-2 py-1 tabular-nums">{year}</p>
@@ -64,7 +64,7 @@ const textColorClass = isLightColor(color) ? "text-black" : "text-white";
 
     <!-- MEDIA STRIP -->
     <div
-      class="-mt-8 sm:-mt-9 md:-mt-10 lg:-mt-11 xl:-mt-12 2xl:-mt-14 -mb-1 flex overflow-x-auto no-scrollbar snap-x snap-mandatory aspect-video"
+      class="-mt-9 sm:-mt-10 md:-mt-11 lg:-mt-12 xl:-mt-12 2xl:-mt-14 -mb-1 flex overflow-x-auto no-scrollbar snap-x snap-mandatory aspect-video"
       style={`background-color: ${color};`}
       data-media
     >
@@ -107,7 +107,7 @@ const textColorClass = isLightColor(color) ? "text-black" : "text-white";
           </p>
 
 
-          <div class="flex-1 flex items-center justify-center text-xs sm:text-base md:text-lg xl:text-xl">
+          <div class="flex-1 flex items-center justify-center text-xs sm:text-base md:text-lg xl:text-xl leading-tight">
             <div>
               <p class="leading-tight">{description}</p>
 
@@ -115,7 +115,7 @@ const textColorClass = isLightColor(color) ? "text-black" : "text-white";
                 <a
                   href={link}
                   target="_blank"
-                  class="underline block leading-tight mt-1"
+                  class="underline block leading-tight"
                 >
                   → {linkText}
                 </a>
@@ -152,8 +152,8 @@ const textColorClass = isLightColor(color) ? "text-black" : "text-white";
     <!-- LEFT GRADIENT -->
     <button
       class="hidden md:block absolute left-0 top-0 w-[17%] z-20 
-            h-[calc(100%+2rem)] sm:h-[calc(100%+2.25rem)] md:h-[calc(100%+2.5rem)] lg:h-[calc(100%+2.75rem)] xl:h-[calc(100%+3rem)] 2xl:h-[calc(100%+3.5rem)]
-            -mt-8 sm:-mt-9 md:-mt-10 lg:-mt-11 xl:-mt-12 2xl:-mt-14
+            h-[calc(100%+2.25rem)] sm:h-[calc(100%+2.5rem)] md:h-[calc(100%+2.75rem)] lg:h-[calc(100%+3rem)] xl:h-[calc(100%+3rem)] 2xl:h-[calc(100%+3.5rem)]
+            -mt-9 sm:-mt-10 md:-mt-11 lg:-mt-12 xl:-mt-12 2xl:-mt-14
              opacity-0 hover:opacity-50 transition-opacity duration-200 cursor-pointer mix-blend-difference"
       style="background: linear-gradient(to right, var(--project-color), transparent);"
       data-prev
@@ -163,8 +163,8 @@ const textColorClass = isLightColor(color) ? "text-black" : "text-white";
     <!-- RIGHT GRADIENT -->
     <button
       class="hidden md:block absolute right-0 top-0  w-[17%] z-20 
-            h-[calc(100%+2rem)] sm:h-[calc(100%+2.25rem)] md:h-[calc(100%+2.5rem)] lg:h-[calc(100%+2.75rem)] xl:h-[calc(100%+3rem)] 2xl:h-[calc(100%+3.5rem)]
-            -mt-8 sm:-mt-9 md:-mt-10 lg:-mt-11 xl:-mt-12 2xl:-mt-14
+            h-[calc(100%+2.25rem)] sm:h-[calc(100%+2.5rem)] md:h-[calc(100%+2.75rem)] lg:h-[calc(100%+3rem)] xl:h-[calc(100%+3rem)] 2xl:h-[calc(100%+3.5rem)]
+            -mt-9 sm:-mt-10 md:-mt-11 lg:-mt-12 xl:-mt-12 2xl:-mt-14
              opacity-0 hover:opacity-50 transition-opacity duration-200 cursor-pointer mix-blend-difference"
       style="background: linear-gradient(to left, var(--project-color), transparent);"
       data-next

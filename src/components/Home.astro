@@ -386,20 +386,22 @@ const projects = [
 ];
 ---
 
-<div class="py-[100vh] no-scrollbar ">
-    {projects.map((project, index) => (
-        <HomeComp 
-            Title={project.Title} 
-            num={(index + 1).toString()}  
-            year={project.year} 
-            Category={project.Category} 
-            images={project.images ?? []}  
-            video={project.video ?? []} 
-            description={project.description}
-            link={project.link}
-            linkText={project.linkText}
-            collaborators={project.collaborators ?? []}
-            color={project.color}
-        />
-    ))}
+<div class="py-[100vh] no-scrollbar">
+    <div class="bg-black">
+        {projects.map((project, index) => (
+            <HomeComp 
+                Title={project.Title} 
+                num={(index + 1).toString()}  
+                year={project.year} 
+                Category={project.Category} 
+                images={project.images ?? []}  
+                video={project.video ?? []} 
+                description={project.description}
+                link={project.link}
+                linkText={project.linkText}
+                collaborators={project.collaborators ?? []}
+                color={project.color}
+            />
+        ))}
+    </div>
 </div>
