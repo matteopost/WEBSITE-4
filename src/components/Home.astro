@@ -130,8 +130,7 @@ import OscarDisplay12  from '../../src/assets/img/OscarDisplay/Oscar-Display-Por
 
 import VideoOscarDisplay1  from '../../src/assets/video/oscar/OSCAR SANS PORTFOLIO WEBSITE 1.mp4'
 
-// OscarDisplay2, OscarDisplay3, OscarDisplay4, OscarDisplay5, OscarDisplay6, OscarDisplay7, OscarDisplay8, OscarDisplay9, OscarDisplay10, OscarDisplay11, OscarDisplay12
-// imgKinesis1, imgKinesis2, imgKinesis3, imgKinesis4, imgKinesis5, imgKinesis6, imgKinesis7
+
 
 import type { ACTION_ERROR_CODES } from "astro:actions";
 
@@ -141,11 +140,11 @@ const projects = [
         color: projectColors[10],
         Category: t("projects.14.Category"), 
         year: t("projects.14.year"), 
-        images: [ ],
+        images: [ OscarDisplay2, OscarDisplay3, OscarDisplay4, OscarDisplay5, OscarDisplay6, OscarDisplay7, OscarDisplay8, OscarDisplay9, OscarDisplay10, OscarDisplay11, OscarDisplay12],
         description: t("projects.14.description"),
         link: "/zip/OscarDisplayVariable.zip",
         video: [
-            // { src: VideoOscarDisplay1, poster: '../../src/assets/img/OscarDisplay/Oscar-Display-Portfolio-1.jpg' },
+            { src: VideoOscarDisplay1, poster: '../../src/assets/img/OscarDisplay/Oscar-Display-Portfolio-1.jpg' },
         ],
 
         linkText: "Download Font",
@@ -158,11 +157,11 @@ const projects = [
         color: projectColors[9],
         Category: t("projects.12.Category"), 
         year: t("projects.12.year"), 
-        images: [],
+        images: [imgKinesis1, imgKinesis2, imgKinesis3, imgKinesis4, imgKinesis5, imgKinesis6, imgKinesis7],
         description: t("projects.12.description"),
         link: "",
         video: [
-            // { src: videoKinesis, poster: '../../src/assets/video/kinesis/poster/KINESIS VIDEO SITO.webp' },
+            { src: videoKinesis, poster: '../../src/assets/video/kinesis/poster/KINESIS VIDEO SITO.webp' },
         ],
 
         linkText: "",
