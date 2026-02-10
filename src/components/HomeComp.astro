@@ -43,7 +43,11 @@ function isLightColor(hex: string) {
 const textColorClass = isLightColor(color) ? "text-black" : "text-white";
 ---
 
-<div class="w-full aspect-video relative flex flex-col" data-project>
+<div
+  class="w-full aspect-video relative flex flex-col"
+  data-project
+  style={`--project-color: ${color};`}
+>
 
   <!-- HEADER -->
   <div class="md:sticky md:top-0 z-30 flex justify-between w-full p-1 pointer-events-none">
@@ -125,22 +129,20 @@ const textColorClass = isLightColor(color) ? "text-black" : "text-white";
       </div>
     </div>
 
-    <!-- LEFT GRADIENT (NON-SCROLLING) -->
+    <!-- LEFT GRADIENT -->
     <button
-      class="hidden md:block absolute left-0 top-0 h-[calc(100%+2.5rem)] w-[15%] z-20 -mt-10 
-             bg-gradient-to-r from-white/20 to-transparent
-             mix-blend-difference opacity-0 hover:opacity-100
-             transition-opacity duration-200 cursor-pointer"
+      class="hidden md:block absolute left-0 top-0 h-[calc(100%+2.75rem)] w-[12%] z-20 -mt-10
+             opacity-0 hover:opacity-80 transition-opacity duration-200 cursor-pointer"
+      style="background: linear-gradient(to right, var(--project-color), transparent);"
       data-prev
       aria-label="Previous slide"
     ></button>
 
-    <!-- RIGHT GRADIENT (NON-SCROLLING) -->
+    <!-- RIGHT GRADIENT -->
     <button
-      class="hidden md:block absolute right-0 top-0 h-[calc(100%+2.5rem)] w-[15%] z-20 -mt-10 
-             bg-gradient-to-l from-white/20 to-transparent
-             mix-blend-difference opacity-0 hover:opacity-100
-             transition-opacity duration-200 cursor-pointer"
+      class="hidden md:block absolute right-0 top-0 h-[calc(100%+2.75rem)] w-[12%] z-20 -mt-10
+             opacity-0 hover:opacity-80 transition-opacity duration-200 cursor-pointer"
+      style="background: linear-gradient(to left, var(--project-color), transparent);"
       data-next
       aria-label="Next slide"
     ></button>
@@ -148,7 +150,7 @@ const textColorClass = isLightColor(color) ? "text-black" : "text-white";
   </div>
 
   <!-- INDICATOR -->
-  <div class="w-full z-20 flex mix-blend-difference pointer-events-none" data-dots>
+  <div class="w-full z-30 flex pointer-events-none" data-dots>
     {Array.from({ length: totalItems }).map(() => (
       <span class="h-[3px] flex-1 bg-white opacity-30"></span>
     ))}
