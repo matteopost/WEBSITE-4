@@ -64,7 +64,7 @@ const textColorClass = isLightColor(color) ? "text-black" : "text-white";
 
     <!-- MEDIA STRIP -->
     <div
-      class="-mt-10 -mb-1 flex overflow-x-auto no-scrollbar snap-x snap-mandatory aspect-video"
+      class="-mt-8 sm:-mt-9 md:-mt-10 lg:-mt-11 xl:-mt-12 2xl:-mt-14 -mb-1 flex overflow-x-auto no-scrollbar snap-x snap-mandatory aspect-video"
       style={`background-color: ${color};`}
       data-media
     >
@@ -100,39 +100,61 @@ const textColorClass = isLightColor(color) ? "text-black" : "text-white";
       ))}
 
       <!-- DESCRIPTION SLIDE -->
-      <div class="w-full h-full flex-shrink-0 snap-center flex items-end">
-        <div class={`w-2/3 p-4 text-[10px] leading-tight ${textColorClass}`}>
-          <p>{Category}</p>
-          <p>{description}</p>
+      <div class="w-full h-full flex-shrink-0 snap-center flex items-center justify-center">
+        <div class={`flex flex-col h-full w-full md:w-1/2 max-w-xl p-3 sm:p-2 md:p-3 text-center ${textColorClass}`}>
+          <p class="leading-tight">
+            {Category}
+          </p>
 
-          {link && (
-            <a href={link} target="_blank" class="underline">
-              → {linkText}
-            </a>
-          )}
 
-          {collaborators.length > 0 && (
-            <div class="mt-2">
-              <p>{t("index.collab")}:</p>
-              {collaborators.map(c =>
-                c.link ? (
-                  <a href={c.link} target="_blank" class="block underline">
-                    {c.name}
-                  </a>
-                ) : (
-                  <p>{c.name}</p>
-                )
+          <div class="flex-1 flex items-center justify-center text-xs sm:text-base md:text-lg xl:text-xl">
+            <div>
+              <p class="leading-tight">{description}</p>
+
+              {link && (
+                <a
+                  href={link}
+                  target="_blank"
+                  class="underline block leading-tight mt-1"
+                >
+                  → {linkText}
+                </a>
               )}
             </div>
-          )}
+          </div>
+
+
+          <div class="flex flex-wrap justify-center gap-x-3 gap-y-0 leading-tight">
+            {collaborators.map(c =>
+              c.link ? (
+                <a
+                  href={c.link}
+                  target="_blank"
+                  class="hover:underline leading-tight"
+                >
+                  {c.name}
+                </a>
+              ) : (
+                <p class="leading-tight">{c.name}</p>
+              )
+            )}
+          </div>
+
+
+
         </div>
       </div>
+
+
+
     </div>
 
     <!-- LEFT GRADIENT -->
     <button
-      class="hidden md:block absolute left-0 top-0 h-[calc(100%+2.75rem)] w-[20%] z-20 -mt-10
-             opacity-0 hover:opacity-75 transition-opacity duration-200 cursor-pointer"
+      class="hidden md:block absolute left-0 top-0 w-[17%] z-20 
+            h-[calc(100%+2rem)] sm:h-[calc(100%+2.25rem)] md:h-[calc(100%+2.5rem)] lg:h-[calc(100%+2.75rem)] xl:h-[calc(100%+3rem)] 2xl:h-[calc(100%+3.5rem)]
+            -mt-8 sm:-mt-9 md:-mt-10 lg:-mt-11 xl:-mt-12 2xl:-mt-14
+             opacity-0 hover:opacity-50 transition-opacity duration-200 cursor-pointer mix-blend-difference"
       style="background: linear-gradient(to right, var(--project-color), transparent);"
       data-prev
       aria-label="Previous slide"
@@ -140,8 +162,10 @@ const textColorClass = isLightColor(color) ? "text-black" : "text-white";
 
     <!-- RIGHT GRADIENT -->
     <button
-      class="hidden md:block absolute right-0 top-0 h-[calc(100%+2.75rem)] w-[20%] z-20 -mt-10
-             opacity-0 hover:opacity-75 transition-opacity duration-200 cursor-pointer"
+      class="hidden md:block absolute right-0 top-0  w-[17%] z-20 
+            h-[calc(100%+2rem)] sm:h-[calc(100%+2.25rem)] md:h-[calc(100%+2.5rem)] lg:h-[calc(100%+2.75rem)] xl:h-[calc(100%+3rem)] 2xl:h-[calc(100%+3.5rem)]
+            -mt-8 sm:-mt-9 md:-mt-10 lg:-mt-11 xl:-mt-12 2xl:-mt-14
+             opacity-0 hover:opacity-50 transition-opacity duration-200 cursor-pointer mix-blend-difference"
       style="background: linear-gradient(to left, var(--project-color), transparent);"
       data-next
       aria-label="Next slide"
